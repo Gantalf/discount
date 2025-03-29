@@ -126,8 +126,8 @@ def get_promotions_by_wallet_names(billeteras: List[str]) -> List[dict]:
         if filtradas:
             supermercado = key.split(":")[1]
             resultados.append({
-                "supermercado": supermercado,
-                "descuentos": filtradas
+                "supermarket": supermercado,
+                "discounts": filtradas
             })
 
     return resultados
@@ -200,3 +200,21 @@ def get_top_discounts(limit=5) -> list[dict]:
         })
 
     return result
+
+def get_all_wallets() -> List[str]:
+    wallets_set = set()
+    keys = r.keys("promo:*")
+
+    for key in keys:
+        data = r.hget(key, "promotions")
+        if not data:
+            continue
+
+        promociones = json.loads(data)
+
+        for promo in promociones:
+            medio = promo.get("medio_pago")
+            if medio:
+                wallets_set.add(medio.strip())
+
+    return sorted(wallets_set)

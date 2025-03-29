@@ -1,1 +1,26 @@
 .env
+# --- GENERAL ---
+.DS_Store
+.env
+*.log
+
+# --- PYTHON / BACKEND ---
+backend/__pycache__/
+backend/**/*.py[cod]
+backend/venv/
+backend/.env
+backend/.mypy_cache/
+backend/.pytest_cache/
+backend/.coverage
+
+# --- NODE / FRONTEND ---
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.DS_Store
+
+# --- IDEs ---
+.vscode/
+.idea/
+*.swp

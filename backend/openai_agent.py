@@ -10,10 +10,10 @@ from models import Descuento, InfoSupermercado, UsuarioInput
 client = OpenAI()  # Lee la API key desde la variable de entorno OPENAI_API_KEY
 
 supermercados = {
-    #"Dia": "https://diaonline.supermercadosdia.com.ar/medios-de-pago-y-promociones",
-    #"Carrefour": "https://www.carrefour.com.ar/descuentos-bancarios",
+    "Dia": "https://diaonline.supermercadosdia.com.ar/medios-de-pago-y-promociones",
+    "Carrefour": "https://www.carrefour.com.ar/descuentos-bancarios",
     "Coto": "https://www.coto.com.ar/descuentos/index.asp",
-    #"Jumbo": "https://www.jumbo.com.ar/descuentos-del-dia?type=por-banco"
+    "Jumbo": "https://www.jumbo.com.ar/descuentos-del-dia?type=por-banco"
 }
 
 def procesar_supermercados() -> list[InfoSupermercado]:

@@ -1,10 +1,20 @@
 from fastapi import FastAPI
 from models import UsuarioInput
-from redis_crud import get_top_discounts, save_promotions
+from redis_crud import get_top_discounts, save_promotions, get_all_wallets
 from openai_agent import procesar_supermercados, get_promotion_by_user_input
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  #["http://localhost:5173"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/create/promotions")
 def obtener_descuentos():
@@ -22,3 +32,8 @@ def descuentos_usuario(input: UsuarioInput):
 def get_top_discounts_api():
     result = get_top_discounts()
     return {"top_discounts": result}
+
+@app.get("/wallets")
+def get_available_wallets():
+    result = get_all_wallets()
+    return result
