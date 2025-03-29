@@ -1,0 +1,11 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Visa Santander MODO",
+      "descuento": "25% de reintegro",
+      "tope": "Tope mensual de $15.000",
+      "aplica_en": "tienda",
+      "detalles": "Válido los viernes. Exclusivo para pagos en un pago con tarjetas Visa de Banco Santander a través de la app MODO."
+    }
+  ]
+} 

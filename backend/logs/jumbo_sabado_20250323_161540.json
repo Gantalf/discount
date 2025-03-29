@@ -1,0 +1,11 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Banco Nación",
+      "descuento": "6, 12 y 18 cuotas sin interés",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los sábados. Aplica a productos seleccionados. No acumulable con otras promociones."
+    }
+  ]
+} 

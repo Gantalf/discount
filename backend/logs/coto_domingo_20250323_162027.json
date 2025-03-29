@@ -1,0 +1,32 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Mercado Pago",
+      "descuento": "15% Dto",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los días sábado 15 y domingo 16 de marzo de 2025. Aplica a pagos realizados a través del escaneo del código QR con la app de Mercado Pago, utilizando todos los medios de pago dentro de la app. El beneficio estará a cargo de Coto y se realizará en línea de cajas sobre el precio de contado. No acumulable con otras promociones vigentes."
+    },
+    {
+      "medio_pago": "Tarjeta de Débito Visa Galicia Más",
+      "descuento": "20% Dto",
+      "tope": "Sin tope de devolución",
+      "aplica_en": "tienda",
+      "detalles": "Válido los días sábado 15 y domingo 16 de marzo de 2025. Aplica a pagos realizados con tarjeta de débito Visa emitida por Banco Galicia Más. El reintegro se hará efectivo dentro de los 20 días posteriores de realizada la compra a través de un crédito en la cuenta donde se realizó el consumo. No acumulable con otras promociones vigentes."
+    },
+    {
+      "medio_pago": "Tarjetas Cabal Banco Credicoop",
+      "descuento": "35% Dto",
+      "tope": "Tope de reintegro: $14.000 por usuario",
+      "aplica_en": "tienda",
+      "detalles": "Válido el sábado 15 y domingo 16 de marzo de 2025. Aplica a pagos realizados con tarjetas Cabal crédito y débito emitidas por Banco Credicoop, escaneando el QR de MODO desde la app Credicoop y/o MODO. No aplica para pagos con dinero en cuenta y/o transferencia. El reintegro se verá reflejado dentro de los 30 días posteriores al consumo en la cuenta del banco. No acumulable con otras promociones vigentes."
+    },
+    {
+      "medio_pago": "Tarjetas Cabal Banco Credicoop (Clientes que perciben haberes en el banco)",
+      "descuento": "45% Dto",
+      "tope": "Tope de reintegro: $18.000 por usuario",
+      "aplica_en": "tienda",
+      "detalles": "Válido el sábado 15 y domingo 16 de marzo de 2025. Aplica a pagos realizados con tarjetas Cabal crédito y débito emitidas por Banco Credicoop, escaneando el QR de MODO desde la app Credicoop y/o MODO. No aplica para pagos con dinero en cuenta y/o transferencia. El reintegro se verá reflejado dentro de los 30 días posteriores al consumo en la cuenta del banco. No acumulable con otras promociones vigentes."
+    }
+  ]
+} 

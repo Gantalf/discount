@@ -1,0 +1,25 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Cencopay",
+      "descuento": "25% Dto",
+      "tope": "Tope de reintegro por día: $8.000",
+      "aplica_en": "tienda",
+      "detalles": "Válido todos los lunes desde el 01/09/2024 al 30/09/2024 en los locales de Jumbo, Disco y Vea habilitados del país. No incluye electrodomésticos, rodados, librería, carnes, leches, mayoristas de fiambrería, productos de marcas propias (C&Co, Home Care, Family Care, Pet Fun, Jumbo y Vea), productos incluidos en los listados de precios convenientes, ni bodegas (Chandon, Terrazas de los Andes, La Rural, Rutini, Catena Zapata, Leoncio Arizu, Valmont, Latitud 33, Terrazas, Clos de los Siete, Barón B, Escorihuela Gascón, Mercier, Monteviejo, La Posta, Trumpeter, Luca, Luigi Bosca, 33 Sur, El Enemigo, Alamos ni Brik). El reintegro podrá aplicar hasta 10 días hábiles posteriores a la compra. Incluye solo venta presencial. Esta promoción no aplica para compras realizadas en los locales 'Vea Express'."
+    },
+    {
+      "medio_pago": "Clarín 365",
+      "descuento": "10% Dto",
+      "tope": "Sin tope de descuento",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido en compras presenciales y virtuales los días lunes y jueves. Beneficio vigente hasta el 31/03/2025."
+    },
+    {
+      "medio_pago": "Banco Ciudad MODO",
+      "descuento": "25% Dto",
+      "tope": "Tope: $6.000 por cuenta por cliente",
+      "aplica_en": "tienda",
+      "detalles": "Válido en compras presenciales. Promoción exclusiva abonando con tarjetas de débito y crédito Banco Ciudad Visa. No acumulable con otras promociones y/o descuentos vigentes."
+    }
+  ]
+} 

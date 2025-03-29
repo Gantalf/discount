@@ -1,0 +1,18 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Tarjeta Naranja",
+      "descuento": "3 cuotas sin interés",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los sábados y domingos. Plan Z."
+    },
+    {
+      "medio_pago": "TCI",
+      "descuento": "15% de descuento",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los sábados y domingos. En un pago con tarjeta de crédito."
+    }
+  ]
+} 

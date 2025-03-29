@@ -1,0 +1,25 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Banco Nación MODO",
+      "descuento": "30% Dto y 3 cuotas sin interés",
+      "tope": "Tope semanal: $10.000",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los miércoles de octubre de 2024. Pagando con tarjetas de crédito Visa o Mastercard de Banco Nación a través de MODO."
+    },
+    {
+      "medio_pago": "Banco Macro MODO",
+      "descuento": "20% Dto",
+      "tope": "Tope mensual: $6.000",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los miércoles de octubre de 2024. Pagando con tarjeta de crédito en un solo pago a través de la app del banco con el QR de MODO."
+    },
+    {
+      "medio_pago": "Banco Patagonia",
+      "descuento": "15% Dto",
+      "tope": "Tope mensual: $3.000",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los miércoles de octubre de 2024. Pagando con tarjeta de débito o crédito en un solo pago."
+    }
+  ]
+} 

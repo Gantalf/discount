@@ -11,3 +11,6 @@ class Descuento(BaseModel):
 class InfoSupermercado(BaseModel):
     supermercado: str
     descuentos: List[Descuento]
+
+class UsuarioInput(BaseModel):
+    prompt: str

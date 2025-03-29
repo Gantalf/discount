@@ -1,0 +1,32 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "MODO BNA+",
+      "descuento": "30% de descuento + 3 cuotas sin interés",
+      "tope": "Tope de reintegro: $12.000 por cliente por semana",
+      "aplica_en": "tienda",
+      "detalles": "Válido los miércoles del 1 de enero al 30 de abril de 2025. Abonando con tarjetas de crédito Visa y Mastercard del BNA a través de MODO BNA+. No válido para pagos con saldo en cuenta. Exclusivo cartera de consumo. Acreditación del reintegro: dentro de los 30 días de realizada la transacción en la cuenta asociada a BNA+."
+    },
+    {
+      "medio_pago": "Comunidad Coto",
+      "descuento": "15% de descuento",
+      "tope": "Sin límite de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los miércoles. Aplican exclusiones. Ver legales."
+    },
+    {
+      "medio_pago": "Club La Nación",
+      "descuento": "15% de descuento",
+      "tope": "Sin límite de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los lunes y miércoles. Aplican exclusiones. Ver legales."
+    },
+    {
+      "medio_pago": "Tarjeta Naranja",
+      "descuento": "3 cuotas sin interés",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los miércoles. Aplican exclusiones. Ver legales."
+    }
+  ]
+} 

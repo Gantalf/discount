@@ -1,0 +1,46 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Cencopay",
+      "descuento": "25% de descuento",
+      "tope": "Tope de reintegro: $3.000 por transacción",
+      "aplica_en": "tienda",
+      "detalles": "Válido todos los lunes y miércoles en los locales habilitados. No incluye electrodomésticos, rodados, librería, carnes, leches, mayoristas de fiambrería, productos de marcas propias ni bodegas específicas."
+    },
+    {
+      "medio_pago": "Superclub+ Visa Débito y Crédito",
+      "descuento": "Hasta 35% de descuento",
+      "tope": "Tope mensual por nivel: desde $600 hasta $3.500",
+      "aplica_en": "online y tienda",
+      "detalles": "Promoción válida en tienda física y online. Beneficio exclusivo a partir de nivel 2. Ahorro por nivel: desde 10% hasta un 35%."
+    },
+    {
+      "medio_pago": "Tarjeta Cencosud",
+      "descuento": "20% de descuento y 3 cuotas sin interés",
+      "tope": "Sin tope especificado",
+      "aplica_en": "online",
+      "detalles": "Exclusivo online. Haciendo tus compras los días miércoles y programando la entrega para el día que prefieras. No incluye electrodomésticos, rodados, librería, carnes, leches, mayoristas de fiambrería ni bodegas específicas."
+    },
+    {
+      "medio_pago": "Banco Nación MODO BNA+",
+      "descuento": "30% de ahorro en un pago",
+      "tope": "Tope de reintegro: hasta $10.000 por cliente por semana",
+      "aplica_en": "online y tienda",
+      "detalles": "Del 1-1-2025 al 28-2-2025. Válido los días miércoles abonando con MODO BNA+ con tarjetas de crédito Visa y Mastercard emitidas por el BNA."
+    },
+    {
+      "medio_pago": "Banco de Corrientes Visa y Mastercard",
+      "descuento": "10% de ahorro y 3 cuotas sin interés",
+      "tope": "10% adicional con tope de $2.000 abonando por MAS Banco",
+      "aplica_en": "tienda",
+      "detalles": "Válido los días miércoles en compras presenciales con tarjetas de crédito Visa y Mastercard del Banco de Corrientes."
+    },
+    {
+      "medio_pago": "Santander Visa Débito y Crédito",
+      "descuento": "30% de descuento",
+      "tope": "Tope de reintegro: $20.000 mensuales",
+      "aplica_en": "online y tienda",
+      "detalles": "Todos los miércoles. Exclusivo para clientes que cobran su sueldo o jubilación en Santander y clientes Santander Select. Válido en Jumbo, Vea y Disco, tanto en tienda online como en locales adheridos, pagando con tarjeta Santander Visa débito, crédito o recargable."
+    }
+  ]
+} 

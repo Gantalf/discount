@@ -1,0 +1,32 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Mercado Pago",
+      "descuento": "10% de descuento",
+      "tope": "No especificado",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los domingos. No se especifica tope de reintegro ni condiciones adicionales."
+    },
+    {
+      "medio_pago": "Banco Galicia",
+      "descuento": "3 cuotas sin interés",
+      "tope": "No especificado",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los domingos. Aplica a tarjetas de crédito Visa o Mastercard de Banco Galicia."
+    },
+    {
+      "medio_pago": "Tarjeta Mi Carrefour Prepaga",
+      "descuento": "15% de descuento",
+      "tope": "No especificado",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los domingos. No se especifica tope de reintegro ni condiciones adicionales."
+    },
+    {
+      "medio_pago": "Tarjeta Mi Carrefour Crédito",
+      "descuento": "15% de descuento",
+      "tope": "No especificado",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los domingos. No se especifica tope de reintegro ni condiciones adicionales."
+    }
+  ]
+} 

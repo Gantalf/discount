@@ -1,0 +1,32 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Tarjeta Cencosud",
+      "descuento": "3 cuotas sin interés",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los días viernes. Aplica a productos seleccionados en rubros como indumentaria, marroquinería, librería, colchones, muebles, entre otros."
+    },
+    {
+      "medio_pago": "Tarjetas de crédito de Banco Macro",
+      "descuento": "20% de ahorro",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los días viernes. Aplica a tarjetas de crédito Visa, Mastercard y American Express de Banco Macro."
+    },
+    {
+      "medio_pago": "Tarjetas de crédito Platinum de Banco Macro",
+      "descuento": "25% de ahorro",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los días viernes. Aplica a tarjetas de crédito Visa, Mastercard y American Express Platinum de Banco Macro."
+    },
+    {
+      "medio_pago": "Tarjetas de crédito Macro Selecta",
+      "descuento": "30% de ahorro",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": "tienda",
+      "detalles": "Válido los días viernes. Aplica a tarjetas de crédito Visa, Mastercard y American Express Macro Selecta."
+    }
+  ]
+} 

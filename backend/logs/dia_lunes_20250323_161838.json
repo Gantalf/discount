@@ -1,0 +1,18 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Banco Ciudad",
+      "descuento": "25% Dto",
+      "tope": "Tope: $10.000 por semana",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los días lunes. Aplica a tarjetas de débito y crédito del Banco Ciudad."
+    },
+    {
+      "medio_pago": "Banco Columbia",
+      "descuento": "20% Dto",
+      "tope": "Tope: $7.000 por transacción",
+      "aplica_en": "online y tienda",
+      "detalles": "Válido los días lunes y viernes. Aplica exclusivamente al pagar con tarjeta de crédito."
+    }
+  ]
+} 

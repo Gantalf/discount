@@ -1,0 +1,46 @@
+{
+  "descuentos": [
+    {
+      "medio_pago": "Banco Columbia",
+      "descuento": "20% de descuento",
+      "tope": "Tope de reintegro: $8.000 mensual",
+      "aplica_en": "tienda",
+      "detalles": "Válido los jueves desde el 01/03/2025 hasta el 31/03/2025. Aplican exclusiones. Ver legales."
+    },
+    {
+      "medio_pago": "Banco Columbia",
+      "descuento": "20% de descuento",
+      "tope": "Tope de reintegro: $14.000 mensual",
+      "aplica_en": "tienda",
+      "detalles": "Válido los jueves desde el 01/03/2025 hasta el 31/03/2025. Aplican exclusiones. Ver legales."
+    },
+    {
+      "medio_pago": "Banco Comafi",
+      "descuento": "25% de descuento",
+      "tope": "Tope de devolución: $5.000 por transacción",
+      "aplica_en": "tienda",
+      "detalles": "Válido los jueves. Aplican exclusiones. Ver legales."
+    },
+    {
+      "medio_pago": "Banco Santander",
+      "descuento": "20% de descuento",
+      "tope": "Tope de reintegro: $20.000 mensual",
+      "aplica_en": "tienda",
+      "detalles": "Válido los jueves. Exclusivo para jubilados que perciban sus haberes en el banco. Aplican exclusiones. Ver legales."
+    },
+    {
+      "medio_pago": "Banco ICBC",
+      "descuento": "20% de descuento",
+      "tope": "Tope de reintegro: $5.000 por transacción",
+      "aplica_en": "tienda",
+      "detalles": "Válido los jueves. Aplican exclusiones. Ver legales."
+    },
+    {
+      "medio_pago": "Banco Municipal",
+      "descuento": "20% de descuento",
+      "tope": "Tope de reintegro: $6.000 por cuenta por mes",
+      "aplica_en": "tienda",
+      "detalles": "Válido los jueves. Aplican exclusiones. Ver legales."
+    }
+  ]
+} 
