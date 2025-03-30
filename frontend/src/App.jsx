@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import WalletFilter from "./components/WalletFilter"
 import DiscountCard from "./components/DiscountCard"
 import Footer from "./components/Footer"
+import DisclaimerAlert from "./components/DisclaimerAlert"
 
 function App() {
   const [discounts, setDiscounts] = useState([])
@@ -74,11 +75,12 @@ function App() {
           )}
   
           {!loadingDiscounts && (
+          <>
             <VStack spacing={6} align="stretch" mt={6}>
               {discounts.map((s) => {
                 const items = s.descuentos || s.discounts || []
                 const market = s.supermercado || s.supermarket || "N/A"
-  
+
                 return items.map((d, idx) => (
                   <Box
                     key={`${market}-${idx}`}
@@ -91,7 +93,9 @@ function App() {
                 ))
               })}
             </VStack>
-          )}
+            <DisclaimerAlert />
+          </>
+        )}
         </Box>
       </Box>
   
