@@ -4,6 +4,7 @@ from backend.redis_crud import get_top_discounts, update_promotions, get_all_wal
 from backend.openai_agent import procesar_supermercados, get_promotion_by_user_input
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 import os
 
 app = FastAPI()
@@ -11,7 +12,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  #["http://localhost:5173"]
+    allow_origins=["https://condescuento.ar", "https://www.condescuento.ar"],  #["http://localhost:5173"]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -45,3 +46,9 @@ frontend_path = os.path.join(current_dir, "..", "frontend", "dist")
 
 
 app.mount("/", StaticFiles(directory=frontend_path, html=True), name="static")
+
+@app.get("/{full_path:path}")
+async def catch_all(full_path: str):
+    index_path = os.path.join(os.path.dirname(__file__), "../frontend/dist/index.html")
+    print("Serving frontend from:", index_path)
+    return FileResponse(index_path)
