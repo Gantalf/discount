@@ -28,7 +28,7 @@ export default function Footer() {
               fontSize="sm"
               color="blue.300"
             >
-              tu@email.com
+              email
             </Link>
             <RouterLink to="/cafecito">
               <Text
