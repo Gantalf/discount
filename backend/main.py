@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from models import UsuarioInput
 from redis_crud import get_top_discounts, update_promotions, get_all_wallets
 from openai_agent import procesar_supermercados, get_promotion_by_user_input
-from typing import List
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 

@@ -4,7 +4,6 @@ import time
 import re
 from redis_crud import get_promotions_by_wallet_names
 from functions_definitions import Openai_function_definitions
-from logger import guardar_log, log_error
 from models import Descuento, InfoSupermercado, UsuarioInput
 
 client = OpenAI()  # Lee la API key desde la variable de entorno OPENAI_API_KEY
@@ -78,7 +77,6 @@ def procesar_supermercados() -> list[InfoSupermercado]:
 
                 try:
                     parsed = json.loads(raw)
-                    guardar_log(f"{nombre}_{dia}", raw)
 
                     for i, d in enumerate(parsed.get("descuentos", [])):
                         try:
@@ -90,11 +88,9 @@ def procesar_supermercados() -> list[InfoSupermercado]:
 
                 except json.JSONDecodeError as e:
                     print(f"⚠️ JSON inválido en {nombre} ({dia}): {e}")
-                    guardar_log(f"{nombre}_{dia}", raw)
 
             except Exception as e:
                 print(f"❌ Error al procesar {nombre} ({dia}): {e}")
-                log_error(e)
 
             time.sleep(1.2)
 
