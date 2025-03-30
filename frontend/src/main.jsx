@@ -11,14 +11,14 @@ const theme = extendTheme({
   styles: {
     global: {
       html: {
-        overflowX: "hidden",     // ✅ bloquea scroll horizontal globalmente
-        width: "100%",           // ✅ asegura que el html no se expanda más
+        overflowX: "hidden",     
+        width: "100%",           
       },
       body: {
         bg: 'gray.900',
         color: 'white',
-        overflowX: "hidden",     // ✅ lo dejamos por seguridad
-        width: "100%",           // ✅ igual que html
+        overflowX: "hidden",    
+        width: "100%",           
       },
     },
   },

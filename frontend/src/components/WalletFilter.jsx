@@ -17,7 +17,7 @@ export default function WalletFilter({ onSelect }) {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch("http://localhost:8000/wallets")
+    fetch("/wallets")
       .then((res) => res.json())
       .then((data) => {
         setWallets(data || [])

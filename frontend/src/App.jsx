@@ -13,8 +13,8 @@ function App() {
     setLoadingDiscounts(true)
   
     const url = walletFilter
-      ? "http://localhost:8000/promotions/user"
-      : "http://localhost:8000/promotions/top"
+      ? "/promotions/user"
+      : "/promotions/top"
   
     const options = walletFilter
       ? {
