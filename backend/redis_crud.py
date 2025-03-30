@@ -2,7 +2,6 @@ from datetime import datetime, timezone
 import json
 import redis
 import os
-from fastapi import HTTPException
 from dotenv import load_dotenv
 from typing import Optional, List, Dict
 from collections import defaultdict

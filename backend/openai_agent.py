@@ -1,10 +1,9 @@
 from openai import OpenAI
 import json
 import time
-import re
-from redis_crud import get_promotions_by_wallet_names
-from functions_definitions import Openai_function_definitions
-from models import Descuento, InfoSupermercado, UsuarioInput
+from backend.redis_crud import get_promotions_by_wallet_names
+from backend.functions_definitions import Openai_function_definitions
+from backend.models import Descuento, InfoSupermercado, UsuarioInput
 
 client = OpenAI()  # Lee la API key desde la variable de entorno OPENAI_API_KEY
 
