@@ -19,7 +19,7 @@ app.add_middleware(
 current_dir = os.path.dirname(os.path.realpath(__file__))
 frontend_path = os.path.join(current_dir, "..", "frontend", "dist")
 
-app.mount("/", StaticFiles(directory=frontend_path, html=True), name="static")
+app.mount("/app", StaticFiles(directory=frontend_path, html=True), name="static")
 
 @app.post("/create/promotions")
 def obtener_descuentos():
