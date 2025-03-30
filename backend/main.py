@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from models import UsuarioInput
-from redis_crud import get_top_discounts, save_promotions, get_all_wallets
+from redis_crud import get_top_discounts, update_promotions, get_all_wallets
 from openai_agent import procesar_supermercados, get_promotion_by_user_input
 from typing import List
 from fastapi.middleware.cors import CORSMiddleware
@@ -20,7 +20,7 @@ app.add_middleware(
 def obtener_descuentos():
     resultados = procesar_supermercados()
     for supermercado in resultados:
-        save_promotions(supermercado.supermercado, [d.model_dump() for d in supermercado.descuentos])
+        update_promotions(supermercado.supermercado, [d.model_dump() for d in supermercado.descuentos])
     return resultados
 
 
