@@ -16,10 +16,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-current_dir = os.path.dirname(os.path.realpath(__file__))
-frontend_path = os.path.join(current_dir, "..", "frontend", "dist")
-
-app.mount("/app", StaticFiles(directory=frontend_path, html=True), name="static")
 
 @app.post("/create/promotions")
 def obtener_descuentos():
@@ -42,3 +38,10 @@ def get_top_discounts_api():
 def get_available_wallets():
     result = get_all_wallets()
     return result
+
+
+current_dir = os.path.dirname(os.path.realpath(__file__))
+frontend_path = os.path.join(current_dir, "..", "frontend", "dist")
+
+
+app.mount("/", StaticFiles(directory=frontend_path, html=True), name="static")
