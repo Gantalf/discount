@@ -4,6 +4,7 @@ from redis_crud import get_top_discounts, update_promotions, get_all_wallets
 from openai_agent import procesar_supermercados, get_promotion_by_user_input
 from typing import List
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
@@ -15,6 +16,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.mount("/", StaticFiles(directory="../frontend/dist", html=True), name="static")
 
 @app.post("/create/promotions")
 def obtener_descuentos():
