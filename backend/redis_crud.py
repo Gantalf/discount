@@ -131,6 +131,35 @@ def get_promotions_by_wallet_names(billeteras: List[str]) -> List[dict]:
 
     return resultados
 
+def get_all_wallets() -> List[str]:
+    wallets_set = set()
+    keys = r.keys("promo:*")
+    
+    plataformas = {"MODO"}
+
+    for key in keys:
+        data = r.hget(key, "promotions")
+        if not data:
+            continue
+
+        promociones = json.loads(data)
+
+        for promo in promociones:
+            medio = promo.get("medio_pago")
+            if not medio:
+                continue
+
+            partes = medio.strip().split()
+            plataformas_encontradas = [p for p in partes if p in plataformas]
+            entidad = " ".join([p for p in partes if p not in plataformas])
+
+            if entidad:
+                wallets_set.add(entidad.strip())
+            for plataforma in plataformas_encontradas:
+                wallets_set.add(plataforma.strip())
+
+    return sorted(wallets_set)
+
 def extract_percentage(discount: str) -> int:
     match = re.search(r"(\d+)\s*%", discount)
     return int(match.group(1)) if match else 0
@@ -199,21 +228,3 @@ def get_top_discounts(limit=5) -> list[dict]:
         })
 
     return result
-
-def get_all_wallets() -> List[str]:
-    wallets_set = set()
-    keys = r.keys("promo:*")
-
-    for key in keys:
-        data = r.hget(key, "promotions")
-        if not data:
-            continue
-
-        promociones = json.loads(data)
-
-        for promo in promociones:
-            medio = promo.get("medio_pago")
-            if medio:
-                wallets_set.add(medio.strip())
-
-    return sorted(wallets_set)
