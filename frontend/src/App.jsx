@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { Box, VStack, Text } from "@chakra-ui/react"
 import Header from "./components/Header"
 import FilterToggle from "./components/FilterToggle"
@@ -12,55 +12,60 @@ function App() {
   const [filterType, setFilterType] = useState("wallet"); // "wallet" o "supermarket"
   const [filterValue, setFilterValue] = useState(null);
   const [loadingDiscounts, setLoadingDiscounts] = useState(true)
+  const hasSelectedFilter = useRef(false)
+  const hasLoadedInitially = useRef(false)
+  const [filtroFueLimpiado, setFiltroFueLimpiado] = useState(false)
 
-  useEffect(() => {
-    
-    if (!filterValue) {
-      if (filterType === null) return 
-      setLoadingDiscounts(true)
-      fetch("/promotions/top")
-        .then((res) => res.json())
-        .then((data) => {
-          setDiscounts(data.top_discounts || [])
-        })
-        .catch((err) => {
-          console.error("Error fetching top discounts:", err)
-          setDiscounts([])
-        })
-        .finally(() => {
-          setLoadingDiscounts(false)
-        })
-      return
-    }
+  const fetchTopDiscounts = () => {
+    setLoadingDiscounts(true)
+    fetch("/promotions/top")
+      .then(res => res.json())
+      .then(data => setDiscounts(data.top_discounts || []))
+      .catch(() => setDiscounts([]))
+      .finally(() => setLoadingDiscounts(false))
+  }
   
-    
+  const fetchFilteredDiscounts = () => {
     setLoadingDiscounts(true)
   
-    let prompt = ""
-    if (filterType === "wallet") {
-      prompt = `Tengo ${filterValue}. ¿Qué descuentos tengo disponibles?`
-    } else if (filterType === "supermarket") {
-      prompt = `¿Qué descuentos hay para el supermercado ${filterValue}?`
-    }
+    const prompt =
+      filterType === "wallet"
+        ? `Tengo ${filterValue}. ¿Qué descuentos tengo disponibles?`
+        : `¿Qué descuentos hay para el supermercado ${filterValue}?`
   
     fetch("/promotions/user", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ prompt }),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        setDiscounts(data.result || [])
-      })
-      .catch((err) => {
-        console.error("Error fetching filtered discounts:", err)
-        setDiscounts([])
-      })
-      .finally(() => {
-        setLoadingDiscounts(false)
-      })
+      .then(res => res.json())
+      .then(data => setDiscounts(data.result || []))
+      .catch(() => setDiscounts([]))
+      .finally(() => setLoadingDiscounts(false))
+  }
+
+  useEffect(() => {
+    // Primera vez que carga la app
+    if (!hasLoadedInitially.current && !filterValue) {
+      fetchTopDiscounts()
+      hasLoadedInitially.current = true
+      return
+    }
   
-  }, [filterValue])
+    // Solo cargar top si se limpió explícitamente
+    if (!filterValue && filtroFueLimpiado) {
+      fetchTopDiscounts()
+      hasSelectedFilter.current = false
+      setFiltroFueLimpiado(false) // Reinicia el flag
+      return
+    }
+  
+    // Si hay filtro, cargar resultados
+    if (filterValue) {
+      hasSelectedFilter.current = true
+      fetchFilteredDiscounts()
+    }
+  }, [filterValue, filtroFueLimpiado])
   
 
   return (
@@ -72,6 +77,7 @@ function App() {
             filterType={filterType}
             setFilterType={setFilterType}
             setFilterValue={setFilterValue}
+            setFilterFueLimpiado={setFiltroFueLimpiado}
           />
 
           {!filterValue && (

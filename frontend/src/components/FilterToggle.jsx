@@ -1,7 +1,7 @@
 import { Box, Button, Flex } from "@chakra-ui/react"
 import GenericFilter from "./GenericFilter"
 
-export default function FilterToggle({ filterType, setFilterType, setFilterValue }) {
+export default function FilterToggle({ filterType, setFilterType, setFilterValue, setFilterFueLimpiado }) {
   const isWallet = filterType === "wallet"
 
   return (
@@ -36,7 +36,6 @@ export default function FilterToggle({ filterType, setFilterType, setFilterValue
             color="white"
             onClick={() => {
               setFilterType("supermarket")
-              setFilterValue(null)
             }}
           >
             Supermercado
@@ -47,6 +46,7 @@ export default function FilterToggle({ filterType, setFilterType, setFilterValue
           title={isWallet ? "billeteras" : "supermercados"}
           fetchUrl={isWallet ? "/wallets" : "/supermarkets"}
           onSelect={setFilterValue}
+          onClear={() => setFilterFueLimpiado(true)}
         />
       </Box>
     </Box>

@@ -4,7 +4,7 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons"
 import { useEffect, useState } from "react"
 
-export default function GenericFilter({ title, fetchUrl, onSelect }) {
+export default function GenericFilter({ title, fetchUrl, onSelect, onClear }) {
   const [options, setOptions] = useState([])
   const [loading, setLoading] = useState(true)
 
@@ -50,7 +50,10 @@ export default function GenericFilter({ title, fetchUrl, onSelect }) {
           </Menu>
 
           <Button
-            onClick={() => onSelect(null)}
+            onClick={() => {
+              onSelect(null)
+              onClear?.()
+            }}
             bg="red.500"
             _hover={{ bg: "red.600" }}
           >
