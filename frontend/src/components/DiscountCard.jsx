@@ -144,7 +144,7 @@ export default function DiscountCard({ data, market }) {
                   colorScheme="purple"
                   variant="ghost"
                 >
-                  IA resumen
+                  Resumí con IA
                 </Button>
               )}
             </Box>
