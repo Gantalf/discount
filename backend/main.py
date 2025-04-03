@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from backend.models import UsuarioInput
-from backend.redis_crud import get_top_discounts, update_promotions, get_all_wallets
-from backend.openai_agent import procesar_supermercados, get_promotion_by_user_input
+from backend.models import UsuarioInput, UpdateInfo, SummaryRequest
+from backend.redis_crud import get_top_discounts, update_promotions, get_all_wallets, get_all_supermarkets
+from backend.openai_agent import procesar_supermercados, get_promotion_by_user_input, get_summary
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -12,7 +12,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://condescuento.ar", "https://www.condescuento.ar"],  #["http://localhost:5173"]
+    allow_origins= ["http://localhost:5173", "http://localhost:8000"], #["https://condescuento.ar", "https://www.condescuento.ar"], ["http://localhost:5173"]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -25,10 +25,17 @@ def obtener_descuentos():
         update_promotions(supermercado.supermercado, [d.model_dump() for d in supermercado.descuentos])
     return resultados
 
+@app.put("/update/promotion")
+def update_promotions_endpoint(body: UpdateInfo):
+    success = update_promotions(body.supermarket, [p.model_dump() for p in body.discounts])
+    return {"success": success}
 
 @app.post("/promotions/user")
 def descuentos_usuario(input: UsuarioInput):
-    return get_promotion_by_user_input(input)
+    print(f"input: {input}")
+    response = get_promotion_by_user_input(input)
+    print(f"response: {response}")
+    return response
 
 @app.get("/promotions/top")
 def get_top_discounts_api():
@@ -40,6 +47,17 @@ def get_available_wallets():
     result = get_all_wallets()
     return result
 
+@app.get("/supermarkets")
+def get_available_supermarkets():
+    """
+    Devuelve la lista de supermercados disponibles.
+    """
+    return get_all_supermarkets()
+
+@app.post("/summary")
+def summarize_text(body: SummaryRequest):
+    result = get_summary(body)
+    return {"summary": result}
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 frontend_path = os.path.join(current_dir, "..", "frontend", "dist")

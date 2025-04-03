@@ -13,5 +13,19 @@ Openai_function_definitions = [
             },
             "required": ["billeteras"]
         }
+    },
+    {
+        "name": "get_promotions_by_supermarket",
+        "description": "Obtiene los descuentos disponibles para un supermercado en particular.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "supermarket": {
+                    "type": "string",
+                    "description": "Nombre del supermercado del cual se desean obtener los descuentos"
+                }
+            },
+            "required": ["supermarket"]
+        }
     }
 ]

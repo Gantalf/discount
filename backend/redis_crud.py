@@ -68,22 +68,24 @@ def get_all_promotions() -> List[Dict]:
 
 
 # 🔍 Get promotions by supermarket
-def get_promotions_by_supermarket(supermarket: str) -> Optional[Dict]:
+def get_promotions_by_supermarket(supermarket: str) -> Optional[List[dict]]:
     """
-    Returns promotions for a given supermarket name.
+    Returns promotions for a given supermarket name, formatted like other promotion results.
     """
     key = f"promo:{supermarket.lower()}"
     data = r.hgetall(key)
+
     if data:
         try:
             promotions = json.loads(data.get("promotions", "[]"))
-            return {
+            return [{
                 "supermarket": supermarket,
-                "updated_at": data.get("updated_at"),
-                "promotions": promotions
-            }
+                "discounts": promotions
+            }]
         except Exception as e:
             print(f"⚠️ Error parsing data for {supermarket}: {e}")
+            return None
+
     return None
 
 
@@ -159,6 +161,19 @@ def get_all_wallets() -> List[str]:
                 wallets_set.add(plataforma.strip())
 
     return sorted(wallets_set)
+
+def get_all_supermarkets() -> List[str]:
+    keys = r.keys("promo:*")
+    supermercados = set()
+
+    for key in keys:
+        try:
+            supermercado = key.split(":")[1]
+            supermercados.add(supermercado.capitalize())
+        except Exception as e:
+            print(f"⚠️ Error leyendo key '{key}': {e}")
+
+    return sorted(list(supermercados))
 
 def extract_percentage(discount: str) -> int:
     match = re.search(r"(\d+)\s*%", discount)
