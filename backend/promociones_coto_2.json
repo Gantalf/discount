@@ -1,0 +1,140 @@
+{
+  "supermarket": "COTO",
+  "discounts": [
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/logo_ciudad.png",
+      "medio_pago": "Banco Ciudad – Tarjetas de crédito Visa, Mastercard y Cabal en 1 pago",
+      "descuento": "25% descuento",
+      "tope": "",
+      "detalles": "Todos los Lunes en un pago con tarjetas de crédito Visa, Mastercard y Cabal Reembolso máximo $10.000semanal por cliente.Aplican exclusiones. Ver legal.",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.arundefined",
+      "medio_pago": "Todos los medios de pago (débito, crédito y efectivo) — exclusivo jubilados y pensionados en tienda",
+      "descuento": "15% DESCUENTO",
+      "tope": "",
+      "detalles": "Martes y Jueves en un pago para todos los JUBILADOS Y PENSIONADOS presentando dni Con todos los medios de pago. No válido para venta online. Aplican exclusiones. Ver legal.",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/modocredicoop.jpg",
+      "medio_pago": "Banco Credicoop – Tarjetas Cabal (débito y crédito) pagando con MODO",
+      "descuento": "30% ahorro",
+      "tope": "Tope de reintegro $15.000 por usuario por semana.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Lunes abonando con tarjetas de débito y crédito cabal credicoop",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/logo_uala.jpg",
+      "medio_pago": "Ualá – Mastercard prepaga y Mastercard crédito",
+      "descuento": "25% ahorro",
+      "tope": "Tope de reintegro: $15.000 tarjeta de crédito, $10.000 prepaga.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Lunes pagando con tu tarjeta prepaga y crédito mastercard",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/comu2.png",
+      "medio_pago": "Miembros Comunidad Coto – en 1 pago (cualquier medio habilitado en tienda)",
+      "descuento": "15% descuento",
+      "tope": "Sin tope de reintegro.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Miércoles en un pago si sos miembro DE NUESTRA COMUNIDAD",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/modobna2.jpg",
+      "medio_pago": "Banco Nación – Tarjetas de crédito Visa y Mastercard vía MODO (app BNA+)",
+      "descuento": "30% descuento",
+      "tope": "Tope de reintegro unificado: $12.000 por día Miércoles por cliente.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Miércoles con tarjetas de crédito visa y mastercard del bna a través de la app",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/superviellemodo.jpg",
+      "medio_pago": "Banco Supervielle – Tarjetas de crédito y débito a través de MODO",
+      "descuento": "20% AHORRO",
+      "tope": "Tope por cuenta por mes: $8.000. Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Martes con tarjetas de crédito y débito",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/superviellemodo.jpg",
+      "medio_pago": "Banco Supervielle – Clientes Identité/Plan Sueldo – tarjetas de crédito y débito vía MODO",
+      "descuento": "25% AHORRO",
+      "tope": "Tope cuenta sueldo y cartera Identité por cuenta por mes: $15.000. Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Martes para clientes Identité y plan sueldo con tarjetas de crédito y débito",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/logo_portena.jpg",
+      "medio_pago": "Programa Ciudadanía Porteña (tarjeta del programa)",
+      "descuento": "15% DESCUENTO",
+      "tope": "Sin tope de reintegro. Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Martes y Jueves programa ciudadania porteña",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/anses2.png",
+      "medio_pago": "Beneficios ANSES – tarjetas de débito y crédito en 1 pago",
+      "descuento": "10% DESCUENTO",
+      "tope": "Sin tope de reintegro. Aplican exclusiones. Ver legal.",
+      "detalles": "De Lunes a Jueves en un pago con tarjetas de débito y crédito",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/logo_icbc.png",
+      "medio_pago": "ICBC – Tarjeta de débito Visa",
+      "descuento": "20% ahorro",
+      "tope": "Sin tope de reintegro.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Jueves con tarjetas DE DÉBITO VISA",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/columbia2.jpg",
+      "medio_pago": "Banco Columbia – Tarjeta de débito Visa",
+      "descuento": "20% descuento",
+      "tope": "Tope de reintegro: $8.000 mensual.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Jueves con tarjetas DE DÉBITO VISA",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/columbia2.jpg",
+      "medio_pago": "Banco Columbia – Tarjetas de crédito Visa y Mastercard en 1 pago",
+      "descuento": "20% descuento",
+      "tope": "Tope de reintegro: $22.000 mensual.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Jueves en un pago con tarjetas de crédito VISA y mastercard",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/logo_comafi.png",
+      "medio_pago": "Banco Comafi – Tarjeta de débito Visa",
+      "descuento": "25% descuento",
+      "tope": "Tope de devolución: $10.000 p/ transacción. Clientes Cuenta Comafi Único tope de reintegro $12.000.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Jueves con tarjeta VISA débito",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    },
+    {
+      "logo": "https://www.coto.com.ar/images/bancos/santander2.jpg",
+      "medio_pago": "Banco Santander – Tarjeta de débito Visa",
+      "descuento": "20% descuento",
+      "tope": "Tope de reintegro $20.000 mensual.Aplican exclusiones. Ver legal.",
+      "detalles": "Todos los Lunes con tarjetas de débito VISA",
+      "aplica_en": "",
+      "legales": "https://www.coto.com.ar/legales/"
+    }
+  ]
+}
