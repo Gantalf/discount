@@ -2,6 +2,8 @@ import json
 from playwright.sync_api import sync_playwright
 import time
 
+from logo_mapper import infer_medio_pago, register_logo
+
 def limpiar_texto(texto):
     texto = texto.replace("\\", "")  # elimina barras invertidas
     texto = texto.replace("\"", "'")  # reemplaza comillas dobles escapadas por simples
@@ -28,8 +30,13 @@ def obtener_promociones():
         for tarjeta in tarjetas:
             try:
                 # Imagen (medio de pago)
-                img = tarjeta.query_selector("img.diaio-custom-bank-promotions-0-x-list-by-days__img-logo")
-                logo = img.get_attribute("src")
+                img = tarjeta.query_selector(
+                    "img.diaio-custom-bank-promotions-0-x-list-by-days__img-logo"
+                )
+                logo = img.get_attribute("src") if img else ""
+                medio_pago = infer_medio_pago(logo) or ""
+                if medio_pago:
+                    register_logo(logo, medio_pago)
 
                 # Textos visibles
                 texto = tarjeta.inner_text().split("\n")
@@ -52,14 +59,17 @@ def obtener_promociones():
                     
                     pagina.keyboard.press("Escape")
 
-                promociones.append({
-                    "logo": logo,
-                    "descuento": descuento,
-                    "tope": tope,
-                    "aplica_en": aplica_en,
-                    "detalles": " ".join(texto),
-                    "legales": legales.strip()
-                })
+                promociones.append(
+                    {
+                        "logo": logo,
+                        "medio_pago": medio_pago,
+                        "descuento": descuento,
+                        "tope": tope,
+                        "aplica_en": aplica_en,
+                        "detalles": " ".join(texto),
+                        "legales": legales.strip(),
+                    }
+                )
             except Exception as e:
                 print(f"Error procesando tarjeta: {e}")
 

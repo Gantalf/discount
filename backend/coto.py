@@ -2,6 +2,9 @@ import json
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
+from logo_mapper import infer_medio_pago, register_logo
+
+
 def limpiar_texto(texto):
     return texto.replace("\n", " ").replace("\xa0", " ").strip()
 
@@ -48,6 +51,9 @@ def obtener_promociones_coto():
                     if src and not src.startswith("http"):
                         src = "https://www.coto.com.ar" + src.replace("../", "/")
                     logo_url = src
+                medio_pago = infer_medio_pago(logo_url) or ""
+                if medio_pago:
+                    register_logo(logo_url, medio_pago)
 
                 # Legales
                 text_el = tarjeta.query_selector("div.alt-font.text-medium-gray.text-extra-small")
@@ -58,14 +64,17 @@ def obtener_promociones_coto():
                 else:
                     detalle = f"{detalle} {text}".strip()
 
-                promociones.append({
-                    "logo": logo_url,
-                    "descuento": descuento,
-                    "tope": tope,
-                    "detalles": detalle,
-                    "aplica_en": "",
-                    "legales": "https://www.coto.com.ar/legales/"
-                })
+                promociones.append(
+                    {
+                        "logo": logo_url,
+                        "medio_pago": medio_pago,
+                        "descuento": descuento,
+                        "tope": tope,
+                        "detalles": detalle,
+                        "aplica_en": "",
+                        "legales": "https://www.coto.com.ar/legales/",
+                    }
+                )
             except Exception as e:
                 print(f"Error procesando tarjeta: {e}")
 
