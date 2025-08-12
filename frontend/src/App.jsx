@@ -27,16 +27,10 @@ function App() {
   
   const fetchFilteredDiscounts = () => {
     setLoadingDiscounts(true)
-  
-    const prompt =
-      filterType === "wallet"
-        ? `Tengo ${filterValue}. ¿Qué descuentos tengo disponibles?`
-        : `¿Qué descuentos hay para el supermercado ${filterValue}?`
-  
     fetch("/promotions/user", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
+      body: JSON.stringify({ filterType, filterValue }),
     })
       .then(res => res.json())
       .then(data => setDiscounts(data.result || []))

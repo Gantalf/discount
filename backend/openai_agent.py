@@ -1,9 +1,7 @@
 from openai import OpenAI
 import json
 import time
-from backend.redis_crud import get_promotions_by_wallet_names, get_promotions_by_supermarket
-from backend.functions_definitions import Openai_function_definitions
-from backend.models import Descuento, InfoSupermercado, UsuarioInput, SummaryRequest
+from backend.models import Descuento, InfoSupermercado, SummaryRequest
 
 client = OpenAI()  # Lee la API key desde la variable de entorno OPENAI_API_KEY
 
@@ -101,40 +99,6 @@ def procesar_supermercados() -> list[InfoSupermercado]:
 
     return resultados
 
-def get_promotion_by_user_input(input: UsuarioInput):
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {"role": "user", "content": input.prompt}
-        ],
-        functions=Openai_function_definitions,
-        function_call="auto"
-    )
-
-    if not response.choices:
-        return {"error": "No hubo respuesta del modelo"}
-
-    choice = response.choices[0]
-    finish_reason = choice.finish_reason
-
-    if finish_reason == "function_call":
-        func_call = choice.message.function_call
-        if func_call:
-            name = func_call.name
-            args = json.loads(func_call.arguments)
-
-            if name == "get_promotions_by_wallet_names":
-                resultado = get_promotions_by_wallet_names(**args)
-                return {"result": resultado, "func_called": name}
-
-            elif name == "get_promotions_by_supermarket":
-                resultado = get_promotions_by_supermarket(**args)
-                return {"result": resultado, "func_called": name}
-
-        else:
-            return {"error": "No se llamó a ninguna función"}
-
-    return {"message": "No se invocó ninguna función"}
 
 def get_summary(body: SummaryRequest):
     prompt = f"Resumí en pocas palabras este texto legal para un consumidor: {body.text}"

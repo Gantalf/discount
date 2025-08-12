@@ -1,7 +1,14 @@
 from fastapi import FastAPI
 from backend.models import UsuarioInput, UpdateInfo, SummaryRequest
-from backend.redis_crud import get_top_discounts, update_promotions, get_all_wallets, get_all_supermarkets
-from backend.openai_agent import procesar_supermercados, get_promotion_by_user_input, get_summary
+from backend.redis_crud import (
+    get_top_discounts,
+    update_promotions,
+    get_all_wallets,
+    get_all_supermarkets,
+    get_promotions_by_wallet_names,
+    get_promotions_by_supermarket,
+)
+from backend.openai_agent import procesar_supermercados, get_summary
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -32,10 +39,13 @@ def update_promotions_endpoint(body: UpdateInfo):
 
 @app.post("/promotions/user")
 def descuentos_usuario(input: UsuarioInput):
-    print(f"input: {input}")
-    response = get_promotion_by_user_input(input)
-    print(f"response: {response}")
-    return response
+    if input.filter_type == "wallet":
+        result = get_promotions_by_wallet_names([input.filter_value])
+    elif input.filter_type == "supermarket":
+        result = get_promotions_by_supermarket(input.filter_value) or []
+    else:
+        result = []
+    return {"result": result}
 
 @app.get("/promotions/top")
 def get_top_discounts_api():

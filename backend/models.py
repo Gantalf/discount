@@ -1,5 +1,5 @@
 from typing import List, Optional, Union
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class Descuento(BaseModel):
     medio_pago: str
@@ -15,7 +15,11 @@ class InfoSupermercado(BaseModel):
     descuentos: List[Descuento]
 
 class UsuarioInput(BaseModel):
-    prompt: str
+    filter_type: str = Field(..., alias="filterType")
+    filter_value: str = Field(..., alias="filterValue")
+
+    class Config:
+        populate_by_name = True
 
 class UpdateInfo(BaseModel):
     supermarket: str
