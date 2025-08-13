@@ -14,7 +14,7 @@ interface SupermarketFilterProps {
 
 const SUPERMARKETS = [
   { name: "Carrefour", logo: "/carrefour-logo.png" },
-  { name: "Día", logo: "/dia-supermarket-logo.png" },
+  { name: "Dia", logo: "/dia-supermarket-logo.png" },
   { name: "Coto", logo: "/generic-leaf-logo.png" },
   { name: "Jumbo", logo: null },
   { name: "Cordiez", logo: null },
