@@ -214,17 +214,15 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
             <div key={discount.id} className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
               <div className="flex items-center space-x-3">
                 <Badge variant="secondary">#{index + 1}</Badge>
-                <div>
+                <div> 
                   <p className="font-medium text-sm">{discount.supermarket}</p>
                   <p className="text-xs text-muted-foreground">{discount.medio_pago}</p>
-                </div>
-              </div>
-              <div className="text-right">
-                <Badge variant="default" className="bg-green-600">
+                  <Badge variant="default" className="bg-green-600">
                   {discount.descuento}
                 </Badge>
-                <p className="text-xs text-muted-foreground mt-1">{discount.tope && `Tope ${discount.tope}`}</p>
+                </div>
               </div>
+              
             </div>
           ))}
         </CardContent>

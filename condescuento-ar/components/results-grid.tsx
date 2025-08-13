@@ -87,25 +87,13 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
               {/* Header with logos and discount */}
               <div className="flex items-start">
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center">
-                    {discount.logo_supermarket ? (
-                      <img
-                        src={discount.logo_supermarket || "/placeholder.svg"}
-                        alt={discount.supermarket}
-                        className="w-8 h-8 object-contain"
-                      />
-                    ) : (
-                      <span className="text-xs font-bold">{discount.supermarket.slice(0, 2)}</span>
-                    )}
-                  </div>
                   <div>
                     <h3 className="font-semibold text-sm">{discount.supermarket}</h3>
                     <p className="text-xs text-muted-foreground">{discount.medio_pago}</p>
                     <Badge
                       variant="default"
-                      className="mt-1 bg-green-600 hover:bg-green-700 text-white whitespace-normal break-words text-center leading-tight"
+                      className="mt-1 bg-green-600 hover:bg-green-700 text-white whitespace-normal break-words text-start leading-tight"
                     >
-                      <Percent className="w-3 h-3 mr-1" />
                       {discount.descuento}
                     </Badge>
                   </div>
@@ -128,7 +116,7 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                       ) : (
                         <div className="flex space-x-1">
                           {discount.aplica_en.map((url, idx) => (
-                            <img key={idx} src={url} alt="aplica en" className="w-6 h-6 object-contain" />
+                            <img key={idx} src={url} alt="aplica en" className="w-12 h-12 object-contain" />
                           ))}
                         </div>
                       )}
