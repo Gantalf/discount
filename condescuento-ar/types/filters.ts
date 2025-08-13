@@ -12,9 +12,9 @@ export interface Discount {
   descuento: string
   tope?: string
   detalles: string
-  aplica_en: string
-  legales: string
-  dia: string[]
+  aplica_en?: string
+  legales?: string
+  dia?: string[]
   logo_supermarket?: string
   logo_payment?: string
 }
