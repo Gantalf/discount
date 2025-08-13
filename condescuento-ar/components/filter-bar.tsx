@@ -25,14 +25,14 @@ export function FilterBar({ filters, onFiltersChange, onReset }: FilterBarProps)
   ].reduce((a, b) => a + b, 0)
 
   return (
-    <div className="sticky top-16 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 -mx-4 px-4 py-4">
-      <div className="space-y-4">
+    <div className="sticky top-16 z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border/40 -mx-4 px-4 py-4 overflow-x-hidden">
+      <div className="space-y-4 overflow-x-hidden">
         {/* Mobile Filter Toggle */}
-        <div className="flex items-center justify-between md:hidden">
+        <div className="flex items-center justify-between md:hidden overflow-x-hidden">
           <Button
             variant="outline"
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 flex-shrink-0"
           >
             <Filter className="h-4 w-4" />
             <span>Filtros</span>
@@ -43,7 +43,7 @@ export function FilterBar({ filters, onFiltersChange, onReset }: FilterBarProps)
             )}
           </Button>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 flex-shrink-0">
             <Button variant="ghost" size="sm" onClick={onReset}>
               <RotateCcw className="h-4 w-4" />
             </Button>
@@ -54,8 +54,8 @@ export function FilterBar({ filters, onFiltersChange, onReset }: FilterBarProps)
         </div>
 
         {/* Filter Controls */}
-        <div className={`space-y-4 ${isCollapsed ? "hidden md:block" : ""}`}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className={`space-y-4 overflow-x-hidden ${isCollapsed ? "hidden md:block" : ""}`}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-x-hidden">
             {/* Supermarket Filter */}
             <SupermarketFilter
               selected={filters.supermarkets || []}

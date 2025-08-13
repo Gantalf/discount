@@ -103,13 +103,13 @@ export function SupermarketFilter({ selected, onChange }: SupermarketFilterProps
 
       {/* Selected chips */}
       {selected.length > 0 && (
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 overflow-x-hidden">
           {selected.map((supermarket) => (
-            <Badge key={supermarket} variant="secondary" className="text-xs px-2 py-1">
-              {supermarket}
+            <Badge key={supermarket} variant="secondary" className="text-xs px-2 py-1 flex-shrink-0">
+              <span className="truncate max-w-24">{supermarket}</span>
               <button
                 onClick={() => handleRemove(supermarket)}
-                className="ml-1 hover:bg-destructive/20 rounded-full p-0.5"
+                className="ml-1 hover:bg-destructive/20 rounded-full p-0.5 flex-shrink-0"
               >
                 <X className="h-3 w-3" />
               </button>

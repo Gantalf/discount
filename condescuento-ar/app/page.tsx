@@ -17,10 +17,10 @@ export default function HomePage() {
   const [selectedLegales, setSelectedLegales] = useState<string | null>(null)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 overflow-x-hidden">
       <Header />
 
-      <main className="container mx-auto px-4 py-6 space-y-8">
+      <main className="container mx-auto px-4 py-6 space-y-8 overflow-x-hidden">
         <HeroSection
           onSearch={(query) => updateFilters({ search: query })}
           onWalletSelect={(wallets) => updateFilters({ paymentMethods: wallets })}
@@ -28,8 +28,8 @@ export default function HomePage() {
 
         <FilterBar filters={filters} onFiltersChange={updateFilters} onReset={resetFilters} />
 
-        <div className="grid lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-3 space-y-8">
+        <div className="grid lg:grid-cols-4 gap-8 overflow-x-hidden">
+          <div className="lg:col-span-3 space-y-8 overflow-x-hidden">
             <ResultsGrid
               discounts={discounts}
               loading={loading}
@@ -40,7 +40,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 overflow-x-hidden">
             <SavingsInsights discounts={discounts} filters={filters} />
 
             <RatesPanel />
