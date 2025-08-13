@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from "react"
 import type { Filters, Discount } from "@/types/filters"
 
+const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || ""
+
 function generateId() {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
     return (crypto as Crypto).randomUUID()
@@ -28,7 +30,7 @@ export function useDiscounts(filters: Filters) {
           (filters.paymentMethods && filters.paymentMethods.length > 0)
 
         if (!hasFilter) {
-          const res = await fetch("/promotions/top")
+          const res = await fetch(`${API_BASE}/promotions/top`)
           const data = await res.json()
           const items = data.top_discounts || []
           fetched = items.flatMap((item: any) =>
@@ -39,12 +41,7 @@ export function useDiscounts(filters: Filters) {
               descuento: d.descuento,
               tope: d.tope,
               detalles: d.detalles,
-              aplica_en:
-                typeof d.aplica_en === "string"
-                  ? d.aplica_en
-                  : Array.isArray(d.aplica_en)
-                  ? d.aplica_en.join(", ")
-                  : undefined,
+              aplica_en: d.aplica_en,
               legales: d.legales || "",
               dia: d.dia || [],
               logo_supermarket: d.logo_supermarket,
@@ -58,7 +55,7 @@ export function useDiscounts(filters: Filters) {
 
           wallets.forEach((wallet) =>
             requests.push(
-              fetch("/promotions/user", {
+              fetch(`${API_BASE}/promotions/user`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ filterType: "wallet", filterValue: wallet }),
@@ -68,7 +65,7 @@ export function useDiscounts(filters: Filters) {
 
           markets.forEach((market) =>
             requests.push(
-              fetch("/promotions/user", {
+              fetch(`${API_BASE}/promotions/user`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ filterType: "supermarket", filterValue: market }),
@@ -86,12 +83,7 @@ export function useDiscounts(filters: Filters) {
                 descuento: d.descuento,
                 tope: d.tope,
                 detalles: d.detalles,
-                aplica_en:
-                  typeof d.aplica_en === "string"
-                    ? d.aplica_en
-                    : Array.isArray(d.aplica_en)
-                    ? d.aplica_en.join(", ")
-                    : undefined,
+                aplica_en: d.aplica_en,
                 legales: d.legales || "",
                 dia: d.dia || [],
                 logo_supermarket: d.logo_supermarket,
