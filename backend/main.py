@@ -6,7 +6,7 @@ from backend.redis_crud import (
     get_all_wallets,
     get_all_supermarkets,
     get_promotions_by_wallet_names,
-    get_promotions_by_supermarket,
+    get_promotions_by_supermarket_names,
 )
 from backend.openai_agent import procesar_supermercados, get_summary
 from fastapi.middleware.cors import CORSMiddleware
@@ -39,10 +39,15 @@ def update_promotions_endpoint(body: UpdateInfo):
 
 @app.post("/promotions/user")
 def descuentos_usuario(input: UsuarioInput):
+    values = (
+        input.filter_value
+        if isinstance(input.filter_value, list)
+        else [input.filter_value]
+    )
     if input.filter_type == "wallet":
-        result = get_promotions_by_wallet_names([input.filter_value])
+        result = get_promotions_by_wallet_names(values)
     elif input.filter_type == "supermarket":
-        result = get_promotions_by_supermarket(input.filter_value) or []
+        result = get_promotions_by_supermarket_names(values)
     else:
         result = []
     return {"result": result}

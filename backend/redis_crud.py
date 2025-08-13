@@ -89,6 +89,15 @@ def get_promotions_by_supermarket(supermarket: str) -> Optional[List[dict]]:
     return None
 
 
+def get_promotions_by_supermarket_names(supermarkets: List[str]) -> List[dict]:
+    results: List[dict] = []
+    for market in supermarkets:
+        promos = get_promotions_by_supermarket(market)
+        if promos:
+            results.extend(promos)
+    return results
+
+
 # 🔄 Update promotions (overwrite only if exists)
 def update_promotions(supermarket: str, new_promotions: List[dict]) -> bool:
     """

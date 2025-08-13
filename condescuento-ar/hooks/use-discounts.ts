@@ -49,31 +49,26 @@ export function useDiscounts(filters: Filters) {
             }))
           )
         } else {
-          const requests: Promise<any>[] = []
           const wallets = filters.paymentMethods || []
           const markets = filters.supermarkets || []
+          let results: any[] = []
 
-          wallets.forEach((wallet) =>
-            requests.push(
-              fetch(`${API_BASE}/promotions/user`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ filterType: "wallet", filterValue: wallet }),
-              }).then((res) => res.json())
-            )
-          )
+          if (wallets.length > 0) {
+            const res = await fetch(`${API_BASE}/promotions/user`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ filterType: "wallet", filterValue: wallets }),
+            })
+            results = [await res.json()]
+          } else if (markets.length > 0) {
+            const res = await fetch(`${API_BASE}/promotions/user`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ filterType: "supermarket", filterValue: markets }),
+            })
+            results = [await res.json()]
+          }
 
-          markets.forEach((market) =>
-            requests.push(
-              fetch(`${API_BASE}/promotions/user`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ filterType: "supermarket", filterValue: market }),
-              }).then((res) => res.json())
-            )
-          )
-
-          const results = await Promise.all(requests)
           fetched = results.flatMap((res) =>
             (res.result || []).flatMap((item: any) =>
               (item.discounts || item.descuentos || []).map((d: any) => ({
