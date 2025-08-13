@@ -57,7 +57,7 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
       date.setDate(date.getDate() + i)
       const dayName = date.toLocaleDateString("es-AR", { weekday: "long" })
 
-      const dayDiscounts = discounts.filter((d) => d.dia.some((day) => day.toLowerCase() === dayName.toLowerCase()))
+      const dayDiscounts = discounts.filter((d) => d.dia && d.dia.some((day) => day.toLowerCase() === dayName.toLowerCase()))
 
       const dailySavings = dayDiscounts.reduce((sum, discount) => {
         const percentage = Number.parseInt(discount.descuento.replace("%", ""))
@@ -148,10 +148,10 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
                 data={insights.paymentData}
                 cx="50%"
                 cy="50%"
-                outerRadius={80}
+                outerRadius={70}
                 fill="#8884d8"
                 dataKey="value"
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                label={false}
               >
                 {insights.paymentData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
@@ -163,9 +163,28 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
                   border: "1px solid hsl(var(--border))",
                   borderRadius: "8px",
                 }}
+                formatter={(value, name) => [value, name]}
               />
             </PieChart>
           </ResponsiveContainer>
+          
+          {/* Simple legend below */}
+          <div className="mt-4 grid grid-cols-2 gap-2">
+            {insights.paymentData.map((entry, index) => (
+              <div key={entry.name} className="flex items-center space-x-2 text-xs">
+                <div 
+                  className="w-3 h-3 rounded-full flex-shrink-0" 
+                  style={{ backgroundColor: COLORS[index % COLORS.length] }}
+                />
+                <span className="text-muted-foreground truncate">
+                  {entry.name}
+                </span>
+                <span className="font-medium">
+                  ({entry.value})
+                </span>
+              </div>
+            ))}
+          </div>
         </CardContent>
       </Card>
 
