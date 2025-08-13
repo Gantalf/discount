@@ -109,12 +109,12 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                     <div>{discount.dia.join(", ")}</div>
                   )}
                   {discount.aplica_en && (
-                    <div className="flex items-center space-x-1">
-                      <MapPin className="w-3 h-3" />
+                    <div className="flex items-start space-x-1">
+                      <MapPin className="w-3 h-3 flex-shrink-0" />
                       {typeof discount.aplica_en === "string" ? (
-                        <span>{discount.aplica_en}</span>
+                        <span className="flex-1 break-words">{discount.aplica_en}</span>
                       ) : (
-                        <div className="flex flex-wrap gap-1">
+                        <div className="flex flex-wrap gap-1 flex-1">
                           {discount.aplica_en.map((url, idx) => (
                             <img key={idx} src={url} alt="aplica en" className="w-12 h-12 object-contain" />
                           ))}
