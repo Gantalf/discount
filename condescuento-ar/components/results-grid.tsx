@@ -114,7 +114,7 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                       {typeof discount.aplica_en === "string" ? (
                         <span>{discount.aplica_en}</span>
                       ) : (
-                        <div className="flex space-x-1">
+                        <div className="flex flex-wrap gap-1">
                           {discount.aplica_en.map((url, idx) => (
                             <img key={idx} src={url} alt="aplica en" className="w-12 h-12 object-contain" />
                           ))}
