@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge"
 import { Skeleton } from "@/components/ui/skeleton"
 import { ExternalLink, FileText, Sparkles, Clock } from "lucide-react"
 
+const API_BASE = process.env.NEXT_PUBLIC_BACKEND_URL || ""
+
 interface LegalesModalProps {
   legales: string | null
   open: boolean
@@ -33,15 +35,13 @@ export function LegalesModal({ legales, open, onClose }: LegalesModalProps) {
 
     setLoadingSummary(true)
     try {
-      // Simulate AI summary generation
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-
-      // Mock AI summary
-      setSummary(
-        "Esta promoción es válida hasta fin de mes para compras realizadas con el método de pago especificado. " +
-          "No es acumulable con otras promociones vigentes. El descuento se aplica automáticamente al momento del pago. " +
-          "Consulta términos y condiciones completos en el sitio web del supermercado.",
-      )
+      const res = await fetch(`${API_BASE}/summary`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: legales }),
+      })
+      const data = await res.json()
+      setSummary(data.summary || "")
     } catch (error) {
       setSummary("Error al generar resumen automático")
     } finally {

@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Skeleton } from "@/components/ui/skeleton"
-import { Copy, ExternalLink, Calendar, MapPin, CreditCard, Percent } from "lucide-react"
+import { Copy, ExternalLink, MapPin, CreditCard, Percent } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 import type { Discount } from "@/types/filters"
 
@@ -85,7 +85,7 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
           >
             <CardContent className="p-6 space-y-4">
               {/* Header with logos and discount */}
-              <div className="flex items-start justify-between">
+              <div className="flex items-start">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center">
                     {discount.logo_supermarket ? (
@@ -101,28 +101,39 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                   <div>
                     <h3 className="font-semibold text-sm">{discount.supermarket}</h3>
                     <p className="text-xs text-muted-foreground">{discount.medio_pago}</p>
+                    <Badge
+                      variant="default"
+                      className="mt-1 bg-green-600 hover:bg-green-700 text-white whitespace-normal break-words text-center leading-tight"
+                    >
+                      <Percent className="w-3 h-3 mr-1" />
+                      {discount.descuento}
+                    </Badge>
                   </div>
                 </div>
-
-                <Badge variant="default" className="bg-green-600 hover:bg-green-700 text-white">
-                  <Percent className="w-3 h-3 mr-1" />
-                  {discount.descuento}
-                </Badge>
               </div>
 
               {/* Details */}
               <div className="space-y-2">
-                <p className="text-sm font-medium">{discount.detalles}</p>
+                <p className="text-sm font-medium break-words">{discount.detalles}</p>
 
-                <div className="flex items-center space-x-4 text-xs text-muted-foreground">
-                  <div className="flex items-center space-x-1">
-                    <Calendar className="w-3 h-3" />
-                    <span>Detalles</span>
-                  </div>
-                  <div className="flex items-center space-x-1">
-                    <MapPin className="w-3 h-3" />
-                    <span>{discount.aplica_en}</span>
-                  </div>
+                <div className="space-y-1 text-xs text-muted-foreground">
+                  {discount.dia && discount.dia.length > 0 && (
+                    <div>{discount.dia.join(", ")}</div>
+                  )}
+                  {discount.aplica_en && (
+                    <div className="flex items-center space-x-1">
+                      <MapPin className="w-3 h-3" />
+                      {typeof discount.aplica_en === "string" ? (
+                        <span>{discount.aplica_en}</span>
+                      ) : (
+                        <div className="flex space-x-1">
+                          {discount.aplica_en.map((url, idx) => (
+                            <img key={idx} src={url} alt="aplica en" className="w-6 h-6 object-contain" />
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {discount.tope && (
@@ -132,12 +143,21 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                     <span className="font-medium">{discount.tope}</span>
                   </div>
                 )}
-              </div>
 
-              {/* Expanded content */}
-              {expandedCard === discount.id && (
-                <div className="pt-4 border-t border-border/50 space-y-3 animate-in slide-in-from-top-2 duration-200">
-                  <div className="flex items-center space-x-2">
+                <div className="pt-2 flex items-center space-x-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      onShowLegales(discount.legales || "")
+                    }}
+                  >
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Ver legales
+                  </Button>
+
+                  {expandedCard === discount.id && (
                     <Button
                       size="sm"
                       variant="outline"
@@ -149,21 +169,9 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                       <Copy className="w-3 h-3 mr-1" />
                       Copiar condiciones
                     </Button>
-
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        onShowLegales(discount.legales)
-                      }}
-                    >
-                      <ExternalLink className="w-3 h-3 mr-1" />
-                      Ver legales
-                    </Button>
-                  </div>
+                  )}
                 </div>
-              )}
+              </div>
             </CardContent>
           </Card>
         ))}

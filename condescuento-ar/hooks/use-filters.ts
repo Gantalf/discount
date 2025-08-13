@@ -32,7 +32,19 @@ export function useFilters() {
   }, [filters, isHydrated])
 
   const updateFilters = (newFilters: Partial<Filters>) => {
-    setFilters((prev) => ({ ...prev, ...newFilters }))
+    setFilters((prev) => {
+      const updated = { ...prev, ...newFilters }
+
+      if ("supermarkets" in newFilters && newFilters.supermarkets?.length) {
+        delete updated.paymentMethods
+      }
+
+      if ("paymentMethods" in newFilters && newFilters.paymentMethods?.length) {
+        delete updated.supermarkets
+      }
+
+      return updated
+    })
   }
 
   const resetFilters = () => {
