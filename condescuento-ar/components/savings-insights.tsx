@@ -32,15 +32,72 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
     // Calculate savings by supermarket
     const supermarketSavings = discounts.reduce(
       (acc, discount) => {
-        const percentage = Number.parseInt(discount.descuento.replace("%", ""))
-        const tope = discount.tope ? Number.parseInt(discount.tope.replace(/[^\d]/g, "")) : 50000
-        const estimatedSaving = Math.min(tope * (percentage / 100), tope * 0.3) // Estimate 30% of tope as realistic saving
-
-        acc[discount.supermarket] = (acc[discount.supermarket] || 0) + estimatedSaving
+        // Debug individual discount
+        console.log("Processing discount:", discount)
+        
+        // Parse percentage safely
+        const percentageStr = discount.descuento.replace("%", "").trim()
+        const percentage = parseInt(percentageStr, 10)
+        
+        console.log("Percentage parsed:", percentageStr, "→", percentage)
+        
+        // Check if percentage is valid
+        if (isNaN(percentage) || percentage <= 0) {
+          console.warn("Invalid percentage for discount:", discount.descuento, "→", percentage)
+          return acc
+        }
+        
+        // Parse tope safely
+        let tope = 50000 // default value
+        if (discount.tope) {
+          const topeStr = discount.tope.replace(/[^\d]/g, "")
+          const topeParsed = parseInt(topeStr, 10)
+          if (!isNaN(topeParsed) && topeParsed > 0) {
+            tope = topeParsed
+          }
+        }
+        
+        console.log("Tope parsed:", discount.tope, "→", tope)
+        
+        // Use a more realistic average purchase amount of $50,000
+        const averagePurchase = 50000
+        const estimatedSaving = Math.min(averagePurchase * (percentage / 100), tope * (percentage / 100))
+        
+        console.log("Estimated saving:", averagePurchase, "*", percentage, "/ 100 =", estimatedSaving)
+        
+        // Initialize if not exists
+        if (!acc[discount.supermarket]) {
+          acc[discount.supermarket] = 0
+        }
+        
+        acc[discount.supermarket] += estimatedSaving
+        
+        console.log("Accumulated for", discount.supermarket, ":", acc[discount.supermarket])
+        
         return acc
       },
       {} as Record<string, number>,
     )
+
+    // Debug log
+    console.log("Discounts:", discounts)
+    console.log("Supermarket savings:", supermarketSavings)
+    console.log("Supermarket data:", Object.entries(supermarketSavings).map(([name, value]) => ({ name, value })))
+    
+    // More specific debug
+    console.log("Number of unique supermarkets:", Object.keys(supermarketSavings).length)
+    console.log("Supermarket names:", Object.keys(supermarketSavings))
+    console.log("Final data for chart:", Object.entries(supermarketSavings).map(([name, value]) => ({ name, value })))
+    
+    // Debug filtered data
+    const filteredData = Object.entries(supermarketSavings)
+      .filter(([name, value]) => value !== null && value !== undefined && !isNaN(value) && value > 0)
+      .map(([name, value]) => ({ name, value }))
+    
+    console.log("Filtered data for chart:", filteredData)
+    console.log("Data that was filtered out:", Object.entries(supermarketSavings).filter(([name, value]) => 
+      value === null || value === undefined || isNaN(value) || value <= 0
+    ))
 
     // Calculate distribution by payment method
     const paymentDistribution = discounts.reduce(
@@ -60,9 +117,24 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
       const dayDiscounts = discounts.filter((d) => d.dia && d.dia.some((day) => day.toLowerCase() === dayName.toLowerCase()))
 
       const dailySavings = dayDiscounts.reduce((sum, discount) => {
-        const percentage = Number.parseInt(discount.descuento.replace("%", ""))
-        const tope = discount.tope ? Number.parseInt(discount.tope.replace(/[^\d]/g, "")) : 50000
-        return sum + Math.min(tope * (percentage / 100), 5000) // Cap daily savings at $5000
+        const percentageStr = discount.descuento.replace("%", "").trim()
+        const percentage = parseInt(percentageStr, 10)
+        
+        if (isNaN(percentage) || percentage <= 0) {
+          return sum
+        }
+        
+        let tope = 50000
+        if (discount.tope) {
+          const topeStr = discount.tope.replace(/[^\d]/g, "")
+          const topeParsed = parseInt(topeStr, 10)
+          if (!isNaN(topeParsed) && topeParsed > 0) {
+            tope = topeParsed
+          }
+        }
+        
+        const averagePurchase = 50000
+        return sum + Math.min(averagePurchase * (percentage / 100), tope * (percentage / 100))
       }, 0)
 
       return {
@@ -78,13 +150,15 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
     }
 
     return {
-      supermarketData: Object.entries(supermarketSavings).map(([name, value]) => ({ name, value })),
+      supermarketData: Object.entries(supermarketSavings)
+        .filter(([name, value]) => value !== null && value !== undefined && !isNaN(value) && value > 0)
+        .map(([name, value]) => ({ name, value })),
       paymentData: Object.entries(paymentDistribution).map(([name, value]) => ({ name, value })),
       projectionData: thirtyDayProjection,
       topOpportunities: discounts
         .sort((a, b) => {
-          const aPercentage = Number.parseInt(a.descuento.replace("%", ""))
-          const bPercentage = Number.parseInt(b.descuento.replace("%", ""))
+          const aPercentage = parseInt(a.descuento.replace("%", "").trim(), 10) || 0
+          const bPercentage = parseInt(b.descuento.replace("%", "").trim(), 10) || 0
           return bPercentage - aPercentage
         })
         .slice(0, 3),
@@ -115,24 +189,81 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
       <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
         <CardHeader>
           <CardTitle className="text-lg">Ahorro potencial por supermercado</CardTitle>
+          <p className="text-sm text-muted-foreground">
+            {insights.supermarketData.length} supermercado{insights.supermarketData.length !== 1 ? 's' : ''} con promociones
+          </p>
         </CardHeader>
         <CardContent>
+          
           <ResponsiveContainer width="100%" height={200}>
-            <BarChart data={insights.supermarketData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-              <XAxis dataKey="name" tick={{ fontSize: 12 }} stroke="hsl(var(--muted-foreground))" />
-              <YAxis tick={{ fontSize: 12 }} stroke="hsl(var(--muted-foreground))" />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "hsl(var(--card))",
-                  border: "1px solid hsl(var(--border))",
-                  borderRadius: "8px",
-                }}
-                formatter={(value) => [`$${value.toLocaleString()}`, "Ahorro estimado"]}
-              />
-              <Bar dataKey="value" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
-            </BarChart>
+            {insights.supermarketData.length > 0 ? (
+              <BarChart 
+                data={insights.supermarketData}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                <XAxis 
+                  dataKey="name" 
+                  tick={{ fontSize: 12 }} 
+                  stroke="hsl(var(--muted-foreground))"
+                  angle={-45}
+                  textAnchor="end"
+                  height={80}
+                />
+                <YAxis 
+                  tick={{ fontSize: 12 }} 
+                  stroke="hsl(var(--muted-foreground))"
+                  tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
+                />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: "hsl(var(--card))",
+                    border: "1px solid hsl(var(--border))",
+                    borderRadius: "8px",
+                  }}
+                  formatter={(value) => [`$${value.toLocaleString()}`, "Ahorro estimado"]}
+                  labelFormatter={(name) => name}
+                />
+                <Bar 
+                  dataKey="value" 
+                  fill="hsl(var(--primary))" 
+                  radius={[4, 4, 0, 0]}
+                  maxBarSize={80}
+                />
+              </BarChart>
+            ) : (
+              <div className="flex items-center justify-center h-full">
+                <div className="text-center text-muted-foreground">
+                  <div className="text-2xl mb-2">📊</div>
+                  <p>No hay datos para mostrar</p>
+                </div>
+              </div>
+            )}
           </ResponsiveContainer>
+          
+          {/* Legend with calculation info */}
+          <div className="mt-4 p-3 bg-muted/30 rounded-lg">
+            <div className="text-xs text-muted-foreground text-center">
+              <p>💡 <strong>Cálculo:</strong> Promedio de compra $50,000 × % descuento</p>
+              <p className="mt-1">Los ahorros se estiman basándose en un gasto promedio realista</p>
+              
+              {/* Debug info */}
+              <div className="mt-3 p-2 bg-background/50 rounded border border-border/30">
+                <p className="font-medium text-foreground mb-2">📊 Datos del gráfico:</p>
+                <div className="space-y-1 text-left">
+                  {insights.supermarketData.map((item, index) => (
+                    <div key={index} className="flex justify-between">
+                      <span>{item.name}:</span>
+                      <span className="font-mono">${item.value.toLocaleString()}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Total de descuentos procesados: {discounts.length}
+                </p>
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
@@ -185,38 +316,6 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
               </div>
             ))}
           </div>
-        </CardContent>
-      </Card>
-
-      {/* 30-day projection */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-        <CardHeader>
-          <CardTitle className="text-lg">Ahorro acumulado próximos 30 días</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ResponsiveContainer width="100%" height={200}>
-            <LineChart data={insights.projectionData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-              <XAxis dataKey="day" tick={{ fontSize: 12 }} stroke="hsl(var(--muted-foreground))" />
-              <YAxis tick={{ fontSize: 12 }} stroke="hsl(var(--muted-foreground))" />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "hsl(var(--card))",
-                  border: "1px solid hsl(var(--border))",
-                  borderRadius: "8px",
-                }}
-                formatter={(value) => [`$${value.toLocaleString()}`, "Ahorro acumulado"]}
-                labelFormatter={(day) => `Día ${day}`}
-              />
-              <Line
-                type="monotone"
-                dataKey="cumulative"
-                stroke="hsl(var(--primary))"
-                strokeWidth={2}
-                dot={{ fill: "hsl(var(--primary))", strokeWidth: 2, r: 4 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
         </CardContent>
       </Card>
 
