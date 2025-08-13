@@ -70,29 +70,29 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 results-grid">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">Descuentos disponibles</h2>
         <Badge variant="secondary">{discounts.length} resultados</Badge>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-hidden">
         {discounts.map((discount) => (
           <Card
             key={discount.id}
-            className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer border-border/50 bg-card/50 backdrop-blur-sm"
+            className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] cursor-pointer border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden card"
             onClick={() => setExpandedCard(expandedCard === discount.id ? null : discount.id)}
           >
-            <CardContent className="p-6 space-y-4">
+            <CardContent className="p-6 space-y-4 overflow-hidden card-content">
               {/* Header with logos and discount */}
-              <div className="flex items-start">
-                <div className="flex items-center space-x-3">
-                  <div>
-                    <h3 className="font-semibold text-sm">{discount.supermarket}</h3>
-                    <p className="text-xs text-muted-foreground">{discount.medio_pago}</p>
+              <div className="flex items-start overflow-hidden">
+                <div className="flex items-center space-x-3 min-w-0 flex-1">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-sm truncate text-content">{discount.supermarket}</h3>
+                    <p className="text-xs text-muted-foreground truncate text-content">{discount.medio_pago}</p>
                     <Badge
                       variant="default"
-                      className="mt-1 bg-green-600 hover:bg-green-700 text-white whitespace-normal break-words text-start leading-tight"
+                      className="mt-1 bg-green-600 hover:bg-green-700 text-white whitespace-normal break-words text-start leading-tight max-w-full text-content"
                     >
                       {discount.descuento}
                     </Badge>
@@ -101,22 +101,22 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
               </div>
 
               {/* Details */}
-              <div className="space-y-2">
-                <p className="text-sm font-medium break-words">{discount.detalles}</p>
+              <div className="space-y-2 max-w-full overflow-hidden">
+                <p className="text-sm font-medium break-words overflow-hidden text-content">{discount.detalles}</p>
 
-                <div className="space-y-1 text-xs text-muted-foreground">
+                <div className="space-y-1 text-xs text-muted-foreground overflow-hidden">
                   {discount.dia && discount.dia.length > 0 && (
-                    <div>{discount.dia.join(", ")}</div>
+                    <div className="truncate text-content">{discount.dia.join(", ")}</div>
                   )}
                   {discount.aplica_en && (
-                    <div className="flex items-center space-x-1">
-                      <MapPin className="w-3 h-3" />
+                    <div className="flex items-start space-x-1 overflow-hidden">
+                      <MapPin className="w-3 h-3 flex-shrink-0" />
                       {typeof discount.aplica_en === "string" ? (
-                        <span>{discount.aplica_en}</span>
+                        <span className="flex-1 break-words overflow-hidden text-content">{discount.aplica_en}</span>
                       ) : (
-                        <div className="flex space-x-1">
+                        <div className="flex flex-wrap gap-1 flex-1 overflow-hidden">
                           {discount.aplica_en.map((url, idx) => (
-                            <img key={idx} src={url} alt="aplica en" className="w-12 h-12 object-contain" />
+                            <img key={idx} src={url} alt="aplica en" className="w-12 h-12 object-contain flex-shrink-0" />
                           ))}
                         </div>
                       )}
@@ -125,14 +125,14 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                 </div>
 
                 {discount.tope && (
-                  <div className="flex items-center space-x-1 text-xs">
-                    <CreditCard className="w-3 h-3 text-muted-foreground" />
+                  <div className="flex items-center space-x-1 text-xs overflow-hidden">
+                    <CreditCard className="w-3 h-3 text-muted-foreground flex-shrink-0" />
                     <span className="text-muted-foreground">Tope:</span>
-                    <span className="font-medium">{discount.tope}</span>
+                    <span className="font-medium truncate text-content">{discount.tope}</span>
                   </div>
                 )}
 
-                <div className="pt-2 flex items-center space-x-2">
+                <div className="pt-2 flex items-center space-x-2 overflow-hidden flex-container">
                   <Button
                     size="sm"
                     variant="outline"
@@ -140,6 +140,7 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                       e.stopPropagation()
                       onShowLegales(discount.legales || "")
                     }}
+                    className="flex-shrink-0"
                   >
                     <ExternalLink className="w-3 h-3 mr-1" />
                     Ver legales
@@ -153,6 +154,7 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
                         e.stopPropagation()
                         copyConditions(discount)
                       }}
+                      className="flex-shrink-0"
                     >
                       <Copy className="w-3 h-3 mr-1" />
                       Copiar condiciones

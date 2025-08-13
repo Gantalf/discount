@@ -60,44 +60,6 @@ export function HeroSection({ onSearch, onWalletSelect }: HeroSectionProps) {
         </p>
       </div>
 
-      {/* Search Bar */}
-      <div className="max-w-2xl mx-auto relative">
-        <form onSubmit={handleSearch} className="relative">
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <Input
-              type="text"
-              placeholder="Buscar supermercado, billetera, promoción..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-12 pr-4 py-6 text-lg rounded-2xl border-2 border-border/50 focus:border-primary/50 bg-card/50 backdrop-blur-sm"
-            />
-          </div>
-
-          {/* Typeahead Suggestions */}
-          {suggestions.length > 0 && (
-            <div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-xl shadow-lg z-10">
-              {suggestions.map((suggestion, index) => (
-                <button
-                  key={index}
-                  type="button"
-                  onClick={() => {
-                    setSearchQuery(suggestion)
-                    onSearch(suggestion)
-                    setSuggestions([])
-                  }}
-                  className="w-full text-left px-4 py-3 hover:bg-accent transition-colors first:rounded-t-xl last:rounded-b-xl"
-                >
-                  <div className="flex items-center space-x-3">
-                    <Search className="h-4 w-4 text-muted-foreground" />
-                    <span>{suggestion}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
-        </form>
-      </div>
 
       {/* Quick Wallet Selection */}
       <div className="space-y-4">
