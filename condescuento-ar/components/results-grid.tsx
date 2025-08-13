@@ -101,8 +101,8 @@ export function ResultsGrid({ discounts, loading, error, onLoadMore, hasMore, on
               </div>
 
               {/* Details */}
-              <div className="space-y-2">
-                <p className="text-sm font-medium break-words">{discount.detalles}</p>
+              <div className="space-y-2 max-w-full">
+                <p className="text-sm font-medium break-all">{discount.detalles}</p>
 
                 <div className="space-y-1 text-xs text-muted-foreground">
                   {discount.dia && discount.dia.length > 0 && (
