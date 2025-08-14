@@ -39,7 +39,7 @@ redis_client = redis.Redis(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins= ["http://localhost:5173", "http://localhost:8000",  "http://localhost:3000"], #["https://condescuento.ar", "https://www.condescuento.ar"], ["http://localhost:5173"]
+    allow_origins= ["https://condescuento.ar", "https://www.condescuento.ar"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
