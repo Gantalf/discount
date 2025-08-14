@@ -16,7 +16,7 @@ class InfoSupermercado(BaseModel):
 
 class UsuarioInput(BaseModel):
     filter_type: str = Field(..., alias="filterType")
-    filter_value: str = Field(..., alias="filterValue")
+    filter_value: Union[str, List[str]] = Field(..., alias="filterValue")
 
     class Config:
         populate_by_name = True
