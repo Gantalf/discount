@@ -46,15 +46,6 @@ app.add_middleware(
 )
 
 
-@app.on_event("startup")
-async def startup_event():
-    schedule_daily_job(redis_client)
-
-
-@app.on_event("shutdown")
-def shutdown_event():
-    remuneradas_scheduler.shutdown()
-
 @app.post("/create/promotions")
 def obtener_descuentos():
     resultados = procesar_supermercados()
