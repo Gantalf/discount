@@ -195,6 +195,7 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
         </CardHeader>
         <CardContent>
           
+        <div className="relative text-muted-foreground">
           <ResponsiveContainer width="100%" height={200}>
             {insights.supermarketData.length > 0 ? (
               <BarChart 
@@ -202,31 +203,42 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                
                 <XAxis 
                   dataKey="name" 
-                  tick={{ fontSize: 12 }} 
-                  stroke="hsl(var(--muted-foreground))"
+                  /* 👇 que usen el color actual (gris) */
+                  tick={{ fontSize: 12, fill: "currentColor" }}
+                  /* línea del eje y marcas también grises */
+                  axisLine={{ stroke: "currentColor" }}
+                  tickLine={{ stroke: "currentColor" }}
                   angle={-45}
                   textAnchor="end"
                   height={80}
                 />
+                
                 <YAxis 
-                  tick={{ fontSize: 12 }} 
-                  stroke="hsl(var(--muted-foreground))"
-                  tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
+                  tick={{ fontSize: 12, fill: "currentColor" }}
+                  axisLine={{ stroke: "currentColor" }}
+                  tickLine={{ stroke: "currentColor" }}
+                  tickFormatter={(value) => `${(value / 1000).toFixed(0)}k`}
                 />
+
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: "hsl(var(--card))",
+                    backgroundColor: "hsl(var(--popover))",
                     border: "1px solid hsl(var(--border))",
                     borderRadius: "8px",
+                    color: "hsl(var(--popover-foreground))",
                   }}
-                  formatter={(value) => [`$${value.toLocaleString()}`, "Ahorro estimado"]}
+                  wrapperStyle={{ zIndex: 9999 }}
+                  formatter={(value) => [`${Number(value).toLocaleString()}`, "Ahorro estimado"]}
                   labelFormatter={(name) => name}
+                  cursor={{ fill: 'rgba(0,0,0,0.1)' }}
                 />
+
                 <Bar 
                   dataKey="value" 
-                  fill="hsl(var(--primary))" 
+                  fill="hsl(var(--muted-foreground))" 
                   radius={[4, 4, 0, 0]}
                   maxBarSize={80}
                 />
@@ -240,11 +252,12 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
               </div>
             )}
           </ResponsiveContainer>
+        </div>
           
           {/* Legend with calculation info */}
           <div className="mt-4 p-3 bg-muted/30 rounded-lg">
             <div className="text-xs text-muted-foreground text-center">
-              <p>💡 <strong>Cálculo:</strong> Promedio de compra $50,000 × % descuento</p>
+              <p>💡 <strong className="text-foreground">Cálculo:</strong> Promedio de compra $50,000 × % descuento</p>
               <p className="mt-1">Los ahorros se estiman basándose en un gasto promedio realista</p>
               
               {/* Debug info */}
@@ -253,8 +266,8 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
                 <div className="space-y-1 text-left">
                   {insights.supermarketData.map((item, index) => (
                     <div key={index} className="flex justify-between">
-                      <span>{item.name}:</span>
-                      <span className="font-mono">${item.value.toLocaleString()}</span>
+                      <span className="text-foreground">{item.name}:</span>
+                      <span className="font-mono text-foreground">${item.value.toLocaleString()}</span>
                     </div>
                   ))}
                 </div>
@@ -266,85 +279,6 @@ export function SavingsInsights({ discounts, filters }: SavingsInsightsProps) {
           </div>
         </CardContent>
       </Card>
-
-      {/* Distribution by Payment Method */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-        <CardHeader>
-          <CardTitle className="text-lg">Distribución por método de pago</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ResponsiveContainer width="100%" height={200}>
-            <PieChart>
-              <Pie
-                data={insights.paymentData}
-                cx="50%"
-                cy="50%"
-                outerRadius={70}
-                fill="#8884d8"
-                dataKey="value"
-                label={false}
-              >
-                {insights.paymentData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "hsl(var(--card))",
-                  border: "1px solid hsl(var(--border))",
-                  borderRadius: "8px",
-                }}
-                formatter={(value, name) => [value, name]}
-              />
-            </PieChart>
-          </ResponsiveContainer>
-          
-          {/* Simple legend below */}
-          <div className="mt-4 grid grid-cols-2 gap-2">
-            {insights.paymentData.map((entry, index) => (
-              <div key={entry.name} className="flex items-center space-x-2 text-xs">
-                <div 
-                  className="w-3 h-3 rounded-full flex-shrink-0" 
-                  style={{ backgroundColor: COLORS[index % COLORS.length] }}
-                />
-                <span className="text-muted-foreground truncate">
-                  {entry.name}
-                </span>
-                <span className="font-medium">
-                  ({entry.value})
-                </span>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Top Opportunities */}
-      <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
-        <CardHeader>
-          <CardTitle className="text-lg flex items-center space-x-2">
-            <Target className="h-4 w-4" />
-            <span>Top 3 oportunidades hoy</span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-3">
-          {insights.topOpportunities.map((discount, index) => (
-            <div key={discount.id} className="flex items-center justify-between p-3 rounded-lg bg-muted/50">
-              <div className="flex items-center space-x-3">
-                <Badge variant="secondary">#{index + 1}</Badge>
-                <div> 
-                  <p className="font-medium text-sm">{discount.supermarket}</p>
-                  <p className="text-xs text-muted-foreground">{discount.medio_pago}</p>
-                  <Badge variant="default" className="bg-green-600">
-                  {discount.descuento}
-                </Badge>
-                </div>
-              </div>
-              
-            </div>
-          ))}
-        </CardContent>
-      </Card>
     </div>
-  )
+  );
 }

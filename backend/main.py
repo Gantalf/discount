@@ -1,4 +1,12 @@
+import os
+import asyncio
+from dotenv import load_dotenv
+import redis.asyncio as redis
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 from backend.models import UsuarioInput, UpdateInfo, SummaryRequest
 from backend.redis_crud import (
     get_top_discounts,
@@ -9,12 +17,24 @@ from backend.redis_crud import (
     get_promotions_by_supermarket_names,
 )
 from backend.openai_agent import procesar_supermercados, get_summary
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
-import os
+from backend.services.remuneradas_service import (
+    get_cached_or_refresh,
+    refresh_remuneradas,
+    schedule_daily_job,
+    scheduler as remuneradas_scheduler,
+)
+
+load_dotenv()
 
 app = FastAPI()
+
+redis_client = redis.Redis(
+    host=os.getenv("REDIS_HOST"),
+    port=int(os.getenv("REDIS_PORT", "6379")),
+    username=os.getenv("REDIS_USER_NAME"),
+    password=os.getenv("PASS_REDIS"),
+    decode_responses=True,
+)
 
 
 app.add_middleware(
@@ -24,6 +44,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.on_event("startup")
+async def startup_event():
+    schedule_daily_job(redis_client)
+
+
+@app.on_event("shutdown")
+def shutdown_event():
+    remuneradas_scheduler.shutdown()
 
 @app.post("/create/promotions")
 def obtener_descuentos():
@@ -73,6 +103,11 @@ def get_available_supermarkets():
 def summarize_text(body: SummaryRequest):
     result = get_summary(body)
     return {"summary": result}
+
+
+@app.get("/rates/remuneradas")
+async def get_remuneradas_endpoint():
+    return await get_cached_or_refresh(redis_client)
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 frontend_path = os.path.join(current_dir, "..", "frontend", "dist")

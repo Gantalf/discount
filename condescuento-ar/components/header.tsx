@@ -42,11 +42,6 @@ export function Header() {
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                   <NavigationMenuLink className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-                    Tasas de Ahorro
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                  <NavigationMenuLink className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
                     Acerca de
                   </NavigationMenuLink>
                 </NavigationMenuItem>
