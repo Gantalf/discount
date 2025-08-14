@@ -1,0 +1,384 @@
+{
+  "supermarket": "CARREFOUR",
+  "discounts": [
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/48bd593d-f47a-11ef-b37f-d4d4a5afb0b2/img_card/attachments/crf-prepaga-horizontal (1).webp",
+      "medio_pago": "Tarjeta Mi Carrefour Prepaga",
+      "descuento": "20% de descuento en un pago con tarjeta Mi Carrefour prepaga",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Comprando todos los Jueves de Agosto",
+      "legales": "-SUJETO A CONDICIONES DE OTORGAMIENTO Y/O APROBACIÓN CREDITICIA. 20% DESCUENTO: PROMOCIÓN VÁLIDA COMPRANDO LOS JUEVES DE AGOSTO DE 2025 EN LA REPÚBLICA ARGENTINA, EXCLUSIVAMENTE CON TARJETAS MI CARREFOUR PREPAGA DE LA MARCA MASTERCARD EMITIDAS EN ARGENTINA. VÁLIDO PARA LAS COMPRAS REALIZADAS EN WWW.CARREFOUR.COM.AR. 20% (VEINTE POR CIENTO) DE AHORRO EN EL ACTO PARA COMPRAS EN UN (1) PAGO. SIN TOPE MÁXIMO DE DESCUENTO. DESCUENTOS NO VALIDOS ABONANDO A TRAVÉS DE PLATAFORMAS DIGITALES DE PAGO. EXCLUSIVOS PARA CONSUMO FAMILIAR. NO ACUMULABLES CON OTRAS PROMOCIONES VIGENTES. QUEDAN EXCLUIDOS DE LOS DESCUENTOS ELECTRODOMÉSTICOS, TELEFONÍA, FOTOGRAFÍA, INFORMÁTICA, IMAGEN, SONIDO, PRODUCTOS DE BODEGAS CHANDON, TRUMPETER, LEONCIO ARIZU, LA RURAL, RUTINI WINES, BODEGA 33° SUR, CATENA ZAPATA, TERRAZAS DE LOS ANDES, SAINT FELICIEN, GRUPO CLOS DE LOS 7, LECHES INFANTILES Y MATERNIZADAS ETAPAS 1 Y 2, CARNICERIA (CARNE VACUNA, POLLO, CERDO Y EMBUTIDOS) Y CONSERVADORAS DE CERVEZA. PARA MAS INFORMACION INGRESAR A CARREFOUR.COM.AR O BANCODESERVICIOSFINANCIEROS.COM.AR. OTORGA BANCO DE SERVICIOS FINANCIEROS S.A., CUIT 30-69726589-5, INSCRIPTA EN EL RPC EL 14/07/1998, CON N° 5705, L II DE SA, BERUTI 2915, CABA (C1425BBI). LA PROMOCIÓN NO APLICA A PAGOS A TRAVÉS DE BILLETERAS VIRTUALES Y/O PLATAFORMAS DE PAGO ONLINE (POR EJEMPLO, PAYPAL, TODO PAGO, MERCADO PAGO, UALÁ, ETC.) NI TARJETAS DE CRÉDITO CORPORATIVAS Y RECARGABLES. PROMOCIÓN NO VÁLIDA PARA PAGOS CON 2 (DOS) TARJETAS. APLICABLE A TARJETAS MASTERCARD NACIONALES. NO ES ACUMULABLE CON CUPONES DE TICKET MÁS BAJO."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/fff9ddf9-6182-11f0-b37f-a06270dbd415/img_card/attachments/mercado-pago.png",
+      "medio_pago": "Mercado Pago (cuotas sin tarjeta)",
+      "descuento": "Hasta 3 Cuotas sin interés con Mercado Pago",
+      "tope": "Pagando con cuotas sin tarjeta",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Lunes y Miércoles de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA COMPRANDO ONLINE LOS LUNES Y MIÉRCOLES DE AGOSTO. C.F.T. 0,00% BENEFICIO VÁLIDO EXCLUSIVAMENTE PARA LOS DÍAS LUNES Y MIÉRCOLES HASTA EL 30/07/2025 INCLUSIVE. VÁLIDO PARA TIENDAS HIPERMERCADOS CARREFOUR, CARREFOUR MARKET, CARREFOUR EXPRESS, CARREFOUR MAXI DE ARGENTINA. LAS OFERTAS DE PRÉSTAMO SE ENCUENTRAN SUJETAS A REVISIÓN CREDITICIA Y DE RIESGOS POR PARTE DE MERCA- DO PAGO. ESTA PUBLICIDAD NO IMPLICA UNA OBLIGACIÓN DE OTORGAR EL PRÉSTAMO. MERCADO PAGO NO ES UNA ENTIDAD FINANCIERA. LOS FONDOS EN CUENTAS DE PAGO NO SON DEPÓSITOS GARANTIZADOS. MERCADOLIBRE S.R.L. CUIT 30-70308853-4, CASEROS 3039, PISO 2°, C.A.B.A."
+    },
+    {
+      "logo": "",
+      "medio_pago": "Club La Nación",
+      "descuento": "15% de descuento con Club La Nación",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Todos los Lunes",
+      "legales": "PROMOCIÓN VÁLIDA TODOS LOS LUNES HASTA EL 31/8/2025, INGRESANDO EL CUPÓN DE DESCUENTO OBTENIDO EN CLUB LA NACIÓN. VÁLIDO EXCLUSIVAMENTE PARA CLIENTES DE CLUB LA NACIÓN. EXCLUSIVO PARA COMPRAS ONLINE EN CARREFOUR.COM.AR. NO VÁLIDO EN CARREFOUR MAXI, NI EN COMERCIANTE.CARREFOUR.COM.AR. EL DESCUENTO SE HARÁ EFECTIVO EN EL ACTO SIN TOPE. EXCLUSIVO SOLO PARA CONSUMO FAMILIAR. NO ACUMULABLE CON OTRAS PROMOCIONES VIGENTES. MÁXIMO 1 USO POR CLIENTE POR DÍA LUNES. QUEDAN EXCLUIDOS DEL DESCUENTO ELECTRODOMÉSTICOS, TELEFONÍA, FOTOGRAFÍA, INFORMÁTICA, IMAGEN, SONIDO, PRODUCTOS DE LAS SIGUIENTES BODEGAS Y MARCAS: ÁLAMOS, ALTALAND, ANGÉLICA ZAPATA, ARUMA, CARO, CASA DE HERRERO, CHANDON, CUCHILLO DE PALO, D.V. CATENA, EL ENEMIGO, LA POSTA, LUCA, LUIGI BOSCA, NICASIA, OJO DE BUEN CUBERO, RUTINI, SAINT FELICIEN, SAN FELIPE Y VALMONT, LECHES INFANTILES Y MATERNIZADAS ETAPAS 1 Y 2, CARNICERÍA (CARNE VACUNA, POLLO, CERDO Y EMBUTIDOS) Y CONSERVADORAS DE CERVEZA. NO INCLUYE PRODUCTOS VENDIDOS Y ENTREGADOS POR EL VENDEDOR / FABRICANTE. PARA MÁS INFORMACIÓN COMUNÍQUESE GRATUITAMENTE AL TELÉFONO 0-800-444-8484."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/afb32f30-f47a-11ef-b37f-d03b6ed445ad/img_card/attachments/mc.webp",
+      "medio_pago": "Tarjetas Mastercard",
+      "descuento": "15% de descuento en un pago con tarjetas de crédito Mastercard",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Comprando todos los Jueves de Agosto",
+      "legales": "-PROMOCIÓN VÁLIDA COMPRANDO LOS JUEVES DE AGOSTO DE 2025 EN LA REPÚBLICA ARGENTINA, EXCLUSIVAMENTE CON TARJETAS DE CRÉDITO, DÉBITO Y PREPAGA DE LA MARCA MASTERCARD EMITIDAS EN ARGENTINA. VÁLIDO PARA LAS COMPRAS REALIZADAS EN  WWW.CARREFOUR.COM.AR. 15% (QUINCE POR CIENTO) DE AHORRO EN EL ACTO PARA COMPRAS EN UN (1) PAGO.SIN TOPE MÁXIMO. PROMOCIÓN NO VÁLIDA EN HIPERMERCADOS CARREFOUR, CARREFOUR MARKET, CARREFOUR EXPRESS, MAXI CARREFOUR NI COMPRAS REALIZADAS EN COMERCIANTE.CARREFOUR.COM.AR. NO VÁLIDO PARA COMPRAS EN CUOTAS. NO ACUMULABLE CON OTRAS PROMOCIONES VIGENTES. NO VÁLIDO PARA PRODUCTOS ENTREGADOS NI VENDIDOS POR EL FABRICANTE. NO INCLUYE PRODUCTOS DE BODEGAS CHANDON, LEONCIO ARIZU, TERRAZA DE LOS ANDES, TRUMPETER, LA RURAL, RUTINI WINES, BODEGA 33 SUR, CATENA ZAPATA y GRUPO CLOS DE LOS 7, PRODUCTOS DE LA CANASTA DE PRECIOS CUIDADOS, LECHES INFANTILES Y MATERNIZADAS ETAPA 1 Y 2, ELECTRODOMÉSTICOS, CELULARES, PRODUCTOS DE CARNICERÍA: CARNE VACUNA, POLLO, CERDO Y EMBUTIDOS NI CONSERVADORAS DE CERVEZA. PROMOCIÓN NO VÁLIDA PARA PAGOS CON 2 (DOS) TARJETAS. APLICABLE A TARJETAS MASTERCARD NACIONALES. NO ES ACUMULABLE CON CUPONES DE TICKET MÁS BAJO."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/dc756f22-f479-11ef-b37f-f45bce4a2de1/img_card/attachments/crf-credito-horizontal (1).webp",
+      "medio_pago": "Tarjeta Mi Carrefour Crédito",
+      "descuento": "20% de descuento en un pago con tarjeta Mi Carrefour crédito",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Comprando todos los Jueves de Agosto",
+      "legales": "-SUJETO A CONDICIONES DE OTORGAMIENTO Y/O APROBACIÓN CREDITICIA. 20% DESCUENTO: PROMOCIÓN VÁLIDA COMPRANDO LOS JUEVES DE AGOSTO DE 2025 EN LA REPÚBLICA ARGENTINA, EXCLUSIVAMENTE CON TARJETAS MI CARREFOUR CRÉDITO DE LA MARCA MASTERCARD EMITIDAS EN ARGENTINA. VÁLIDO PARA LAS COMPRAS REALIZADAS EN WWW.CARREFOUR.COM.AR. 20% (VEINTE POR CIENTO) DE AHORRO EN EL ACTO PARA COMPRAS EN UN (1) PAGO. SIN TOPE MÁXIMO DE DESCUENTO POR COMPRA . DESCUENTOS NO VALIDOS ABONANDO A TRAVÉS DE PLATAFORMAS DIGITALES DE PAGO. EXCLUSIVOS PARA CONSUMO FAMILIAR. NO ACUMULABLES CON OTRAS PROMOCIONES VIGENTES. QUEDAN EXCLUIDOS DE LOS DESCUENTOS ELECTRODOMÉSTICOS, TELEFONÍA, FOTOGRAFÍA, INFORMÁTICA, IMAGEN, SONIDO, PRODUCTOS DE BODEGAS CHANDON, TRUMPETER, LEONCIO ARIZU, LA RURAL, RUTINI WINES, BODEGA 33° SUR, CATENA ZAPATA, TERRAZAS DE LOS ANDES, SAINT FELICIEN, GRUPO CLOS DE LOS 7, LECHES INFANTILES Y MATERNIZADAS ETAPAS 1 Y 2, CARNICERIA (CARNE VACUNA, POLLO, CERDO Y EMBUTIDOS) Y CONSERVADORAS DE CERVEZA. PARA MAS INFORMACION INGRESAR A CARREFOUR.COM.AR O BANCODESERVICIOSFINANCIEROS.COM.AR. OTORGA BANCO DE SERVICIOS FINANCIEROS S.A., CUIT 30-69726589-5, INSCRIPTA EN EL RPC EL 14/07/1998, CON N° 5705, L II DE SA, BERUTI 2915, CABA (C1425BBI). LA PROMOCIÓN NO APLICA A PAGOS A TRAVÉS DE BILLETERAS VIRTUALES Y/O PLATAFORMAS DE PAGO ONLINE (POR EJEMPLO, PAYPAL, TODO PAGO, MERCADO PAGO, UALÁ, ETC.) NI TARJETAS DE CRÉDITO CORPORATIVAS Y RECARGABLES. PROMOCIÓN NO VÁLIDA PARA PAGOS CON 2 (DOS) TARJETAS. APLICABLE A TARJETAS MASTERCARD NACIONALES. NO ES ACUMULABLE CON CUPONES DE TICKET MÁS BAJO."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/06991a18-5679-11f0-b37f-fc08fbf78cb1/img_card/attachments/club_lanacion.png",
+      "medio_pago": "Club La Nación",
+      "descuento": "15% de descuento con Club La Nación",
+      "tope": "¡Sin Tope!",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg"
+      ],
+      "detalles": "Todos los lunes de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA TODOS LOS LUNES HASTA EL 31/8/2025, PRESENTANDO DNI DEL TITULAR DE CLUB LA NACIÓN EN LÍNEA DE CAJAS. VÁLIDO EN TIENDAS “HIPERMERCADOS CARREFOUR”, “CARREFOUR MARKET” Y “CARREFOUR EXPRESS” DE TODO EL PAÍS . NO VÁLIDO EN CARREFOUR MAXI. EL DESCUENTO SE HARÁ EFECTIVO EN EL ACTO SIN TOPE, DESCUENTO NO VALIDO ABONANDO A TRAVÉS DE PLATAFORMAS DIGITALES DE PAGO. EXCLUSIVO SOLO PARA CONSUMO FAMILIAR. NO ACUMULABLE CON OTRAS PROMOCIONES VIGENTES. QUEDAN EXCLUIDOS DEL DESCUENTO ELECTRODOMÉSTICOS, TELEFONÍA, FOTOGRAFÍA, INFORMÁTICA, IMAGEN, SONIDO, PRODUCTOS DE LAS SIGUIENTES BODEGAS Y MARCAS: ÁLAMOS, ALTALAND, ANGÉLICA ZAPATA, ARUMA, CARO, CASA DE HERRERO, CHANDON, CUCHILLO DE PALO, D.V. CATENA, EL ENEMIGO, LA POSTA, LUCA, LUIGI BOSCA, NICASIA, OJO DE BUEN CUBERO, RUTINI, SAINT FELICIEN, SAN FELIPE Y VALMONT, LECHES INFANTILES Y MATERNIZADAS ETAPAS 1 Y 2, CARNICERÍA (CARNE VACUNA, POLLO, CERDO Y EMBUTIDOS) Y CONSERVADORAS DE CERVEZA. PARA MÁS INFORMACIÓN CONSULTE EN WWW.CARREFOUR.COM.AR. O COMUNÍQUESE GRATUITAMENTE AL TELÉFONO 0-800-444-8484."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/0ed20a6c-5672-11f0-b37f-febde8c23e7e/img_card/attachments/crf-credito-horizontal.png",
+      "medio_pago": "Tarjeta Mi Carrefour Crédito",
+      "descuento": "15% de descuento pagando con tarjeta de crédito Mi Carrefour",
+      "tope": "¡Sin Tope! En el acto.",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los lunes y martes de Agosto",
+      "legales": "15% DE DESCUENTO EXCLUSIVO TODOS LOS LUNES Y MARTES DE AGOSTO DE 2025 ABONANDO CON TARJETA MI CARREFOUR CRÉDITO. EXCLUSIVO EN LOS LOCALES DE BANDERA COMERCIAL CARREFOUR MAXI. DESCUENTO EN EL ACTO SIN TOPE. 15% DE DESCUENTO EXCLUSIVO TODOS LOS LUNES Y MARTES DE JULIO DE 2025 ABONANDO CON TARJETA MI CARREFOUR PREPAGA. DESCUENTO NO VALIDO ABONANDO A TRAVÉS DE PLATAFORMAS DIGITALES DE PAGO. EXCLUSIVO SOLO PARA CONSUMO FAMILIAR. NO ACUMULABLE CON OTRAS PROMOCIONES VIGENTES. QUEDAN EXCLUIDOS DEL DESCUENTO ELECTRODOMÉSTICOS, TELEFONÍA, FOTOGRAFÍA, INFORMÁTICA, IMAGEN, SONIDO, PRODUCTOS DE LAS SIGUIENTES BODEGAS Y MARCAS: ÁLAMOS, ALTALAND, ANGÉLICA ZAPATA, ARUMA, CARO, CASA DE HERRERO, CHANDON, CUCHILLO DE PALO, D.V. CATENA, EL ENEMIGO, LA POSTA, LUCA, LUIGI BOSCA, NICASIA, OJO DE BUEN CUBERO, RUTINI, SAINT FELICIEN, SAN FELIPE Y VALMONT, LECHES INFANTILES Y MATERNIZADAS ETAPAS 1 Y 2, CARNICERÍA, ETC."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/35d30d5f-567a-11f0-b37f-c2cb70a90ede/img_card/attachments/Cuenta_dni.png",
+      "medio_pago": "Cuenta DNI (QR/Clave DNI)",
+      "descuento": "10% de descuento en toda tu compra con Cuenta DNI",
+      "tope": "Acumulable con todas las promos. ¡Sin Tope!",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los miércoles de Julio",
+      "legales": "PROMOCIÓN VÁLIDA TODOS LOS MIÉRCOLES DESDE EL 30 DE JULIO DE 2025 AL 27 DE AGOSTO DE 2025, PARA COMPRAS REALIZADAS A TRAVÉS DE LA FUNCIONALIDAD 'PAGO CLAVE DNI' Y/O QR DE LA APLICACIÓN CUENTA DNI EN TODOS LOS LOCALES DE CARREFOUR MAXI Y LOS CARREFOUR DE MAR DEL PLATA, LA PLATA, PERGAMINO, TANDIL, OLAVARRÍA, BAHÍA BLANCA Y SAN NICOLÁS. ..."
+    },
+    {
+      "logo": "",
+      "medio_pago": "Cheques Pesos Carrefour (devolución en cupones)",
+      "descuento": "Te devolvemos 20% de descuento en cheques pesos Carrefour en tu compra de Frutas, Verduras, Quesos, Fiambres, Leches, Yogures, Postres Lácteos, Mantecas, Quesos Crema y Panadería.",
+      "tope": "Todos los martes del mes",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg"
+      ],
+      "detalles": "Todos los martes de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA LOS MARTES DE AGOSTO DE 2025 EN HIPERMERCADOS, CARREFOUR MARKET Y CARREFOUR EXPRESS. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/edc9e54b-5677-11f0-b37f-b2665656e035/img_card/attachments/bnaymodo.png",
+      "medio_pago": "MODO con tarjetas Banco Nación (Visa/Mastercard)",
+      "descuento": "30% de descuento con tarjetas de crédito Visa y Mastercard de Banco Nación",
+      "tope": "Exclusivo pagando con Modo. Tope semanal $ 12.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los miércoles de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA EXCLUSIVAMENTE PARA LOS DÍAS MIÉRCOLES HASTA EL 31/8/2025. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/4f9ac242-778f-11f0-b37f-f9b6f2b5c87b/img_card/attachments/crf-credito-horizontal.png",
+      "medio_pago": "Tarjeta Mi Carrefour Crédito",
+      "descuento": "Si sos empleado/a público todos los jueves",
+      "tope": "En Alimentos secos, Congelados, Lácteos, Fiambres, Bebidas, Limpieza y Perfumería. Tope máximo de descuento mensual $ 20.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg"
+      ],
+      "detalles": "Todos los jueves de Agosto",
+      "legales": "-PROMOCIÓN VÁLIDA LOS DIAS JUEVES HASTA EL 31/08/2025, EXCLUSIVO EN HIPERMERCADOS CARREFOUR Y CARREFOUR MARKET ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/b4c98e44-7791-11f0-b37f-e8bc7e01c88f/img_card/attachments/crf-credito-horizontal.png",
+      "medio_pago": "Tarjeta Mi Carrefour Crédito",
+      "descuento": "Si sos empleada/o público todos los miércoles",
+      "tope": "En Alimentos secos, Congelados, Lácteos, Fiambres, Bebidas, Limpieza y Perfumería. Tope máximo de descuento mensual $ 20.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg"
+      ],
+      "detalles": "Todos los miércoles de Agosto",
+      "legales": "-PROMOCIÓN VÁLIDA LOS DÍAS MIÉRCOLES HASTA EL 31/08/2025, EXCLUSIVO EN HIPERMERCADOS CARREFOUR Y CARREFOUR MARKET ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/f81a7851-5693-11f0-b37f-e219d79675df/img_card/attachments/anses.png",
+      "medio_pago": "Mercado Pago (QR)",
+      "descuento": "15% de descuento Si sos beneficiario de Anses y cobrás en tu cuenta de Mercado Pago",
+      "tope": "Tope mensual: $ 20.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg"
+      ],
+      "detalles": "Todos los sábados y domingos de Agosto",
+      "legales": "BENEFICIO DE 15% DE DESCUENTO ... A TRAVÉS DEL ESCANEO DEL CÓDIGO QR CON LA APP DE MERCADO PAGO. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/0b76d6a2-5693-11f0-b37f-dbcf5d5b9702/img_card/attachments/mercadopago.png",
+      "medio_pago": "Mercado Pago (Dinero en cuenta, QR)",
+      "descuento": "5% de descuento en toda tu compra con Mercado Pago ¡Sin Tope!",
+      "tope": "Exclusivo con dinero en cuenta. Acumulable con todas las promos.",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los lunes, sábados y domingos de Agosto",
+      "legales": "BENEFICIO VÁLIDO EXCLUSIVAMENTE DE SÁBADOS A LUNES ... ELIGIENDO COMO MEDIO DE PAGO DINERO EN CUENTA. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/9916667a-77a3-11f0-b37f-f944805a8741/img_card/attachments/patagonia.png",
+      "medio_pago": "Tarjeta Débito/Crédito Visa Banco Patagonia (plan sueldo)",
+      "descuento": "Exclusivo para clientes con plan sueldo singular",
+      "tope": "Con tarjeta debito y en un pago con tarjeta de credito. Tope de devolución (POR MES Y POR CUENTA) $ 20.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los Miércoles de Agosto",
+      "legales": "-PROMOCIÓN VÁLIDA LOS DÍAS MIERCOLES HASTA EL 31/08/2025 ... EXCLUSIVO PARA CLIENTES CON PLAN SUELDO ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/0c702034-5692-11f0-b37f-b1d85f57683e/img_card/attachments/bbva.png",
+      "medio_pago": "MODO con tarjetas BBVA (Visa/Mastercard)",
+      "descuento": "25% de descuento con tarjetas de crédito Visa y Mastercard de BBVA",
+      "tope": "Exclusivo cuenta sueldo y pagando con Modo. Tope mensual: $ 20.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los sábados y domingos de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA ... A TRAVÉS DE MODO ... CLIENTES CON CUENTA SUELDO ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/9ddc0289-5685-11f0-b37f-a3f1f683c198/img_card/attachments/mc.png",
+      "medio_pago": "Mastercard Contactless (débito/prepaga/crédito)",
+      "descuento": "15% de descuento con tarjetas de débito, prepaga y crédito Mastercard Contactless",
+      "tope": "Tope: $3.000 por compra",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg"
+      ],
+      "detalles": "Todos los lunes de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA LOS DÍAS LUNES HASTA EL 31/8/2025. PROMOCIÓN VÁLIDA PARA LAS COMPRAS REALIZADAS BAJO LA METODOLOGÍA 'CONTACTLESS' ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/12b5d4ea-567b-11f0-b37f-97a3b2f0dd15/img_card/attachments/macro1.png",
+      "medio_pago": "MODO con tarjetas Macro (Visa/Mastercard)",
+      "descuento": "20% de descuento con todas las tarjetas de crédito en un Pago de Macro",
+      "tope": "Exclusivo pagando con Modo desde la app de Macro. Tope mensual $ 15.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los miércoles de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA LOS DÍAS MIÉRCOLES HASTA EL 31/8/2025. PARA COMPRAS REALIZADAS EN 1 PAGO CON TARJETAS DE CRÉDITO EMITIDAS POR BANCO MACRO A TRAVÉS DE MODO. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/7a8d0602-f473-11ef-b37f-92638dfcf564/img_card/attachments/patagonia.png",
+      "medio_pago": "Tarjeta de crédito Visa Banco Patagonia",
+      "descuento": "20% de descuento en un pago con tarjeta de crédito Visa del Banco Patagonia",
+      "tope": "Tope de devolución: $12.500",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Programando la entrega de tu pedido para los días Miércoles de Agosto",
+      "legales": "-(20% DE AHORRO CON TOPE DE $12,500 ... TARJETAS DE CRÉDITO VISA EMITIDAS POR EL BANCO PATAGONIA EN WWW.CARREFOUR.COM.AR. ..."
+    },
+    {
+      "logo": "",
+      "medio_pago": "Tarjeta de crédito Naranja X",
+      "descuento": "4 cuotas cero interés pagando con Naranja X para toda la compra",
+      "tope": "Todos los días",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los días",
+      "legales": "-BENEFICIO VÁLIDO TODOS LOS DÍAS HASTA EL 31/08/2025 INCLUSIVE. ... TARJETA DE CRÉDITO NARANJA X ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/d4cddc7f-f473-11ef-b37f-a9f1658963b4/img_card/attachments/patagonia.png",
+      "medio_pago": "Tarjeta Visa Banco Patagonia (débito/crédito)",
+      "descuento": "25% de descuento en un pago con tarjeta de debito y crédito Visa del Banco Patagonia",
+      "tope": "Tope de devolución: $15.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Programando la entrega de tu pedido para los días Miércoles de Agosto",
+      "legales": "-'PROMOCIÓN VÁLIDA ... TARJETA DE DÉBITO Y EN 1 PAGO CON TARJETAS DE CRÉDITO EMITIDAS POR EL BANCO PATAGONIA ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/8425d022-f47a-11ef-b37f-e0f7b28662b1/img_card/attachments/bna.png",
+      "medio_pago": "Tarjetas Banco Nación (Visa/Mastercard)",
+      "descuento": "30% de descuento en un pago con tarjetas de crédito Visa o Matercard de Banco Nación",
+      "tope": "Tope de devolución: $12.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Programando la entrega de tu pedido para los días Miércoles de Agosto",
+      "legales": "-PROMOCIÓN VÁLIDA ... TARJETAS DE CRÉDITO VISA Y MASTERCARD DEL BNA ... WWW.CARREFOUR.COM.AR. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/8cc50ddc-f47c-11ef-b37f-c2ee76e77021/img_card/attachments/crf-prepaga-horizontal.webp",
+      "medio_pago": "Tarjeta Mi Carrefour Prepaga",
+      "descuento": "15% de descuento en tu compra del super pagando con tarjeta Mi Carrefour prepaga",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Comprando los días Viernes, Sábado, Domingo, Lunes, Martes y Miércoles",
+      "legales": "-SUJETO A CONDICIONES DE OTORGAMIENTO Y/O APROBACIÓN CREDITICIA. 15% DE DESCUENTO EXCLUSIVO ABONANDO CON TARJETA MI CARREFOUR PREPAGA. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/f34cc674-f47b-11ef-b37f-a3d6e21cf023/img_card/attachments/crf-credito-horizontal.webp",
+      "medio_pago": "Tarjeta Mi Carrefour Crédito",
+      "descuento": "15% de descuento en tu compra del super pagando con tarjeta Mi Carrefour crédito",
+      "tope": "Sin tope de reintegro",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg"
+      ],
+      "detalles": "Comprando los días Viernes, Sábado, Domingo, Lunes, Martes y Miércoles de Agosto",
+      "legales": "-SUJETO A CONDICIONES DE OTORGAMIENTO Y/O APROBACIÓN CREDITICIA. 15% DE DESCUENTO EXCLUSIVO ABONANDO CON TARJETA MI CARREFOUR CREDITO. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/ef5848a6-5685-11f0-b37f-df77fbc993d7/img_card/attachments/mc.png",
+      "medio_pago": "Pago NFC con Mastercard (contactless)",
+      "descuento": "25% de descuento pagando con tu celular Vía NFC",
+      "tope": "Tope: $8.000 por compra",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg"
+      ],
+      "detalles": "Todos los lunes de Agosto",
+      "legales": "-PROMOCIÓN VÁLIDA LOS DÍAS LUNES HASTA EL 31/8/2025. ... 25% PAGANDO CON TU CELULAR VÍA NFC. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/2d21fb8c-f470-11ef-b37f-b942df941adf/img_card/attachments/mayores60-anses.png",
+      "medio_pago": "Mi Carrefour (beneficio ANSES / +60)",
+      "descuento": "10% de descuento si sos parte de Mi Carrefour y beneficiaro de Anses o mayor de 60 años",
+      "tope": "Tope de devolución: $20.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_com.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Comprando los días Lunes, Martes, Miércoles, Jueves y Viernes.",
+      "legales": "-VÁLIDO DE LUNES A VIERNES DE AGOSTO DE 2025. EXCLUSIVO EN LOS HIPERMERCADOS CARREFOUR, CARREFOUR MARKET, CARREFOUR EXPRESS, CARREFOUR.COM.AR Y EN EL CASO DE CARREFOUR MAXI PARA COMPRAS DE CLIENTES MINORISTAS. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/39bca649-568f-11f0-b37f-8fd25d033d26/img_card/attachments/santander.png",
+      "medio_pago": "MODO con tarjeta Visa Santander",
+      "descuento": "25% de descuento en un pago con tarjeta de crédito Visa de Banco Santander",
+      "tope": "Exclusivo pagando con Modo. Tope mensual $ 20.000",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los viernes de Agosto",
+      "legales": "PROMOCIÓN VÁLIDA EXCLUSIVAMENTE PARA LOS DÍAS VIERNES, HASTA EL 31/8/2025. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/5190165f-568d-11f0-b37f-9422ccc2cf81/img_card/attachments/mercadopago.png",
+      "medio_pago": "Mercado Pago (Dinero en cuenta, QR)",
+      "descuento": "10% de descuento en toda tu compra acumulable con todas las promos",
+      "tope": "¡Sin Tope! Exclusivo con dinero en cuenta.",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los viernes de Agosto",
+      "legales": "BENEFICIO VÁLIDO ... ELIGIENDO COMO MEDIO DE PAGO DINERO EN CUENTA. ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/89616964-f698-11ef-b37f-c396af203c85/img_card/attachments/galicia (1).png",
+      "medio_pago": "Tarjetas de crédito Banco Galicia (Visa/Mastercard)",
+      "descuento": "3 cuotas sin interés pagando con Tarjetas de crédito Visa y Mastercard",
+      "tope": "Pagando con tarjetas del Banco Galicia",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Jueves, Viernes, Sábado y Domingo",
+      "legales": "-BENEFICIO VÁLIDO EXCLUSIVAMENTE COMPRANDO ONLINE LOS DÍAS JUEVES, VIERNES, SÁBADOS Y DOMINGOS DE AGOSTO ... BANCO GALICIA ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/74a385cb-5690-11f0-b37f-c2cb70a90ede/img_card/attachments/crf-credito-horizontal.png",
+      "medio_pago": "Tarjeta Mi Carrefour Crédito",
+      "descuento": "3 cuotas sin interés en toda tu compra con tarjeta de crédito Mi Carrefour",
+      "tope": "",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_maxi.svg"
+      ],
+      "detalles": "Todos los sábados y domingos de Agosto",
+      "legales": "C.F.T. 0,00% FINANCIACIÓN EXCLUSIVA ABONANDO CON TARJETA MI CARREFOUR CREDITO ..."
+    },
+    {
+      "logo": "https://www.carrefour.com.ar/api/dataentities/BP/documents/6f2b4959-568c-11f0-b37f-ec35e7cb19c6/img_card/attachments/mercadopago.png",
+      "medio_pago": "Mercado Pago (Dinero en cuenta, QR)",
+      "descuento": "15% de descuento en toda tu compra acumulable con todas las promos",
+      "tope": "¡Sin Tope! Exclusivo con dinero en cuenta.",
+      "aplica_en": [
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_market.svg",
+        "https://carrefourar.vtexassets.com/assets/vtex/assets-builder/carrefourar.theme/81.11.2/logo/logo_express.svg"
+      ],
+      "detalles": "Todos los jueves de Agosto",
+      "legales": "BENEFICIO VÁLIDO ... ELIGIENDO COMO MEDIO DE PAGO DINERO EN CUENTA. ..."
+    }
+  ]
+}

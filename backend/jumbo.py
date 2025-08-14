@@ -2,6 +2,8 @@ import json
 from playwright.sync_api import sync_playwright
 import time
 
+from logo_mapper import infer_medio_pago, register_logo
+
 def limpiar_texto(texto):
     return texto.replace("\\n", " ").replace("\\xa0", " ").strip()
 
@@ -26,6 +28,9 @@ def obtener_promociones_jumbo():
                     # Logo
                     logo_el = tarjeta.query_selector("img")
                     logo = logo_el.get_attribute("src") if logo_el else ""
+                    medio_pago = infer_medio_pago(logo) or ""
+                    if medio_pago:
+                        register_logo(logo, medio_pago)
 
                     # Descuento
                     descuento_el = tarjeta.query_selector("h4")
@@ -57,14 +62,17 @@ def obtener_promociones_jumbo():
                         continue
                     promociones_vistas.add(clave)
 
-                    promociones.append({
-                        "logo": logo,
-                        "descuento": descuento,
-                        "tope": "Para Jumbo este valor aparece en detalles",
-                        "detalles": f"{detalle} {info}".strip(),
-                        "aplica_en": "",
-                        "legales": legales
-                    })
+                    promociones.append(
+                        {
+                            "logo": logo,
+                            "medio_pago": medio_pago,
+                            "descuento": descuento,
+                            "tope": "Para Jumbo este valor aparece en detalles",
+                            "detalles": f"{detalle} {info}".strip(),
+                            "aplica_en": "",
+                            "legales": legales,
+                        }
+                    )
                 except Exception as e:
                     print(f"Error procesando tarjeta: {e}")
 

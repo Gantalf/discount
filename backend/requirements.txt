@@ -4,3 +4,5 @@ pydantic
 python-dotenv
 openai
 redis
+requests
+playwright==1.49.0

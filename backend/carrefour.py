@@ -2,6 +2,8 @@ import json
 from playwright.sync_api import sync_playwright, expect
 import time
 
+from logo_mapper import infer_medio_pago, register_logo
+
 def limpiar_texto(texto):
     texto = texto.replace("\\", "")  # elimina barras invertidas
     texto = texto.replace("\"", "'")  # reemplaza comillas dobles escapadas por simples
@@ -44,11 +46,16 @@ def obtener_promociones():
                 detalles_el = tarjeta.query_selector(".valtech-carrefourar-bank-promotions-0-x-dateText")
                 detalles = detalles_el.inner_text().strip() if detalles_el else ""
                 # Imagen (medio de pago)
-                img_logo = tarjeta.query_selector("div.valtech-carrefourar-bank-promotions-0-x-ColRightCard img")
+                img_logo = tarjeta.query_selector(
+                    "div.valtech-carrefourar-bank-promotions-0-x-ColRightCard img"
+                )
                 logo = ""
                 if img_logo:
                     src = img_logo.get_attribute("src")
                     logo = f"https://www.carrefour.com.ar{src}" if src else ""
+                medio_pago = infer_medio_pago(logo) or ""
+                if medio_pago:
+                    register_logo(logo, medio_pago)
 
                 # Textos visibles
 
@@ -74,14 +81,17 @@ def obtener_promociones():
 
                     
 
-                promociones.append({
-                    "logo": logo,
-                    "descuento": descuento,
-                    "tope": tope,
-                    "aplica_en": aplica_en_urls,
-                    "detalles": detalles,
-                    "legales": legales.strip()
-                })
+                promociones.append(
+                    {
+                        "logo": logo,
+                        "medio_pago": medio_pago,
+                        "descuento": descuento,
+                        "tope": tope,
+                        "aplica_en": aplica_en_urls,
+                        "detalles": detalles,
+                        "legales": legales.strip(),
+                    }
+                )
             except Exception as e:
                 print(f"Error procesando tarjeta: {e}")
 

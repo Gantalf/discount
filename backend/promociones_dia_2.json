@@ -1,0 +1,176 @@
+{
+  "supermarket": "DIA",
+  "discounts": [
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/6493e942-5fa5-4926-9ef7-c29525837f8e___476c4d814c318c5f11166722f5ac2628.png",
+      "medio_pago": "Tarjeta de crédito Naranja X (Plan Z)",
+      "descuento": "25% Dto",
+      "tope": "Tope : $10.000 por semana",
+      "aplica_en": "online",
+      "detalles": "APLICA ONLINE  25% Dto  Tope : $10.000 por semana  Del 01/04/2025 al 31/08/2025  Ver Legales",
+      "legales": "PLAN Z CERO INTERÉS COSTO FINANCIERO TOTAL (CFT) 0% TASA EFECTIVA ANUAL (TEA) 0% TASA NOMINAL ANUAL (TNA) 0%. BENEFICIO VÁLIDO PARA TITULARES Y ADICIONALES DE TARJETA DE CRÉDITO NARANJA X..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/c057ae24-9271-40ba-a4f5-baa4608ca7f2___881f48cbd28030232f8ac9726ea7a6bd.jpg",
+      "medio_pago": "Tarjetas Galicia Visa (crédito y débito) vía MODO",
+      "descuento": "20% Dto",
+      "tope": "Tope : $15.000 Mensual",
+      "aplica_en": "online",
+      "detalles": "APLICA ONLINE  20% Dto  Tope : $15.000 Mensual  Del 01/11/2024 al 30/09/2025 Comprando los dias Jueves. VISA crédito y débito (mediante MODO)  Ver Legales",
+      "legales": "CARTERA DE CONSUMO. PROMOCIÓN DEL 20%..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/9a10ae5d-06e0-429c-995a-f8f71bcdec4b___3e24a19e7f8dd3f35b0ea5ae7a989f4c.jpg",
+      "medio_pago": "Tarjetas Galicia Visa Éminent (crédito y débito) vía MODO",
+      "descuento": "25% Dto",
+      "tope": "Tope : $20.000 Mensual",
+      "aplica_en": "online",
+      "detalles": "APLICA ONLINE  25% Dto  Tope : $20.000 Mensual  Del 01/11/2024 al 30/09/2025.Comprando los días Jueves. VISA crédito y débito Éminent (mediante MODO)  Ver Legales",
+      "legales": "CARTERA DE CONSUMO. PROMOCIÓN DEL 25%..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/cf7b9e06-65d4-4d33-aa50-34856fb79a78___784837ee922c577968cd9e2a8493ec5b.png",
+      "medio_pago": "Tarjeta Mastercard PREX (elegir 'tarjeta de débito' al pagar)",
+      "descuento": "25% Dto",
+      "tope": "Tope : $10.000",
+      "aplica_en": "online",
+      "detalles": "APLICA ONLINE  25% Dto  Tope : $10.000  05/08/2025 y 19/08/2025  Ver Legales",
+      "legales": "1.BENEFICIO: 25% ... TARJETAS MASTERCARD PREX ... el usuario elija “TARJETA DE DÉBITO”..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/b6e771a5-a6a9-4589-bf5a-94ba3c3647bc___eeceeb41717ad6fec0a3a6ffb42d126a.png",
+      "medio_pago": "Mercado Pago (dinero en cuenta)",
+      "descuento": "15% Dto",
+      "tope": "Monto Mínimo: $30.000 - Tope: $10.000.Excluye App Dia",
+      "aplica_en": "online",
+      "detalles": "APLICA ONLINE  15% Dto  Monto Mínimo: $30.000 - Tope: $10.000.Excluye App Dia  20/08/2025 y 27/08/2025. Pagando con dinero en cuenta  Ver Legales",
+      "legales": "CAMPAÑA NÚMERO 11088982... EXCLUSIVO PAGANDO CON DINERO EN CUENTA..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/5122cb5e-a264-4b90-bfbe-a75d12f97a31___9f376a51f26e9018ef28bd21f4cc70cc.png",
+      "medio_pago": "MODO con tarjetas Santander Visa (crédito y débito) – Programa SORPRESA",
+      "descuento": "25% Dto",
+      "tope": "Tope: $20.000 por mes. Exclusivo clientes SORPRESA!",
+      "aplica_en": "online y tienda",
+      "detalles": "APLICA TIENDA  APLICA ONLINE  25% Dto  Tope: $20.000 por mes. Exclusivo clientes SORPRESA!  Del 11/06/2025 al 30/09/2025  Ver Legales",
+      "legales": "VÁLIDO TODOS LOS MIÉRCOLES ABONANDO CON MODO ... TARJETA SANTANDER CRÉDITO Y/O DÉBITO VISA ADHERIDAS AL PROGRAMA SORPRESA!..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/ac5ae341-c1be-4e62-b747-2f03d03b15a1___ef81dfc2e94d84cd38ee51ee689d8561.png",
+      "medio_pago": "MODO con tarjetas de crédito Visa y Mastercard del Banco Nación",
+      "descuento": "30% Dto",
+      "tope": "Tope : $12.000 por semana",
+      "aplica_en": "online y tienda",
+      "detalles": "APLICA TIENDA  APLICA ONLINE  30% Dto  Tope : $12.000 por semana  Del 01/03/2025 al 30/09/2025. Comprando con crédito vía MODO los miércoles  Ver Legales",
+      "legales": "PROMOCIÓN ... A TRAVÉS DE MODO BNA+ CON TARJETAS DE CRÉDITO VISA Y MASTERCARD DEL BNA..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/df5a9baa-504a-4bf4-a706-d67662512560___ddfd281b8b450c2816b844bce3b00995.webp",
+      "medio_pago": "Tarjetas de crédito Visa y Mastercard de Banco Columbia (1 pago)",
+      "descuento": "20% Dto",
+      "tope": "Tope $9.000 por transacción",
+      "aplica_en": "online y tienda",
+      "detalles": "APLICA TIENDA  APLICA ONLINE  20% Dto  Tope $9.000 por transacción  Del 01/04/25 al 30/09/25. Para compras realizadas únicamente los días Lunes y Viernes  Ver Legales",
+      "legales": "PARA COMPRAS ... CON LAS TARJETAS DE CREDITO VISA Y MASTERCARD EMITIDAS POR BANCO COLUMBIA..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/ce7e4cb7-40f7-468d-bf4d-35293efe5b58___c7c17bcbe09fd36ceb08ca519d169a5b.png",
+      "medio_pago": "Tarjeta de débito Banco del Sol",
+      "descuento": "25% Dto",
+      "tope": "",
+      "aplica_en": "online y tienda",
+      "detalles": "APLICA TIENDA  APLICA ONLINE  25% Dto  $5.000 por mes  01/01/2025 al 30/09/2025. \"Tarjeta de Débito.\"  Ver Legales",
+      "legales": "PROMOCIÓN ... QUE REALICEN COMPRAS CON LA TARJETA DE DÉBITO EMITIDA POR EL BANCO..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/9a478ba3-e927-4917-adb0-eb63dc3b1ca6___c3bb23aec09ba4394aee67c824222aa2.jpg",
+      "medio_pago": "Tarjetas Visa y Mastercard (crédito) – 3 cuotas sin interés",
+      "descuento": "3 cuotas sin interés",
+      "tope": "",
+      "aplica_en": "online y tienda",
+      "detalles": "APLICA TIENDA  APLICA ONLINE  3 cuotas sin interés  Pagando con Visa y Mastercard  Del 05/09/2024 al 30/09/2025  Ver Legales",
+      "legales": "PROMOCIÓN DE HASTA 3 CUOTAS SIN INTERÉS ... TARJETA VISA, TARJETA MASTERCARD..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/f0003db2-f59c-4477-839e-7c4987eff04d___05b0366a5120ebfcd4c6e580aea809aa.jpg",
+      "medio_pago": "MODO con tarjetas de crédito Visa o Mastercard del Banco Entre Ríos",
+      "descuento": "30% Dto",
+      "tope": "Tope: $16.000 por semana",
+      "aplica_en": "online y tienda",
+      "detalles": "APLICA TIENDA  APLICA ONLINE  30% Dto  Tope: $16.000 por semana  Del 17/12/2024 al 31/12/2025. Pagando con MODO (crédito)  Ver Legales",
+      "legales": "BENEFICIO PAGANDO CON MODO ... TARJETA DE CRÉDITO VISA O MASTER ... NUEVO BANCO DE ENTRE RÍOS..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/205c4fca-b835-456f-a951-8e2215424069___4077826ab360ad24eb10f4fa341057b6.jpg",
+      "medio_pago": "MODO con tarjetas de crédito Visa o Mastercard del Banco Santa Fe",
+      "descuento": "30% Dto",
+      "tope": "Tope: $16.000 por semana",
+      "aplica_en": "online y tienda",
+      "detalles": "APLICA TIENDA  APLICA ONLINE  30% Dto  Tope: $16.000 por semana  Del 17/12/2024 al 31/12/2025. Pagando con MODO (crédito)  Ver Legales",
+      "legales": "BENEFICIO PAGANDO CON MODO ... NUEVO BANCO SANTA FE..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/5ce96fa2-0f17-4516-90e9-ca01ded62ed3___9a122d2b50aeb2038210e9a3fd7759ae.png",
+      "medio_pago": "MODO con tarjetas de crédito, débito o prepagas (bancos adheridos)",
+      "descuento": "20% Dto",
+      "tope": "Monto Minimo: $20.000 Tope: $20.000 mensual por usuario",
+      "aplica_en": "tienda",
+      "detalles": "APLICA TIENDA  20% Dto  Monto Minimo: $20.000 Tope: $20.000 mensual por usuario  Del 14/06/2025 al 31/08/2025  Ver Legales",
+      "legales": "PAGANDO CON ... app MODO ... con tarjetas de crédito, débito o prepagas..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/c057d3fb-dae0-4d2a-9cdf-9d6fea99edfe___560dc7180afb3684582b44fe75032c21.jpg",
+      "medio_pago": "Visa ICBC (crédito en un pago y débito) vía NFC (Apple Pay / Google Pay / MODO)",
+      "descuento": "20% Dto",
+      "tope": "Tope : $20.000 por tarjeta, por mes",
+      "aplica_en": "tienda",
+      "detalles": "APLICA TIENDA  20% Dto  Tope : $20.000 por tarjeta, por mes  18/07/2025 al 31/12/2025. Pagando con VISA crédito débito vía NFC  Ver Legales",
+      "legales": "20% ... TARJETAS DE CRÉDITO VISA ICBC ... Y TARJETAS DE DÉBITO VISA ICBC, POR MEDIO DE NFC..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/3bd08397-2ad1-45ee-9fd1-4602400cf2ad___185e56b61bc60b82411b1725da9b2cbd.png",
+      "medio_pago": "Mercado Pago (dinero en cuenta) – QR en tienda",
+      "descuento": "15% Dto",
+      "tope": "",
+      "aplica_en": "tienda",
+      "detalles": "APLICA TIENDA  15% Dto  Mínimo de compra : $15.000  06/08/2025 y 13/08/2025. Pagando con dinero en cuenta  Ver Legales",
+      "legales": "MERCADO PAGO QR ... EXCLUSIVO PAGANDO CON DINERO EN CUENTA..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/42d23858-1941-48f6-8dfa-637c79bed0ab___20c3f44587fe1c40801c41167ebcaac2.png",
+      "medio_pago": "Cuenta DNI (Pago Clave DNI)",
+      "descuento": "20% Dto",
+      "tope": "Tope: $8.000 por lunes. Min. Compra $20.000",
+      "aplica_en": "tienda",
+      "detalles": "APLICA TIENDA  20% Dto  Tope: $8.000 por lunes. Min. Compra $20.000  01/08/2025 al 31/08/2025  Ver Legales",
+      "legales": "‘Pago Clave DNI’ de la aplicación CUENTA DNI..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/3d540265-7eb3-4a4e-be1a-797d0690871f___ed7a6e4f20987e6b5f7cd9714bc5d184.png",
+      "medio_pago": "Personal Pay (tarjeta prepaga Visa o QR Personal Pay)",
+      "descuento": "25% Dto",
+      "tope": "Tope : Niveles: 1 ($6000) 2 ($8.000) 3($12.000) 4($15.000) por Semana",
+      "aplica_en": "tienda",
+      "detalles": "APLICA TIENDA  25% Dto  Tope : Niveles: 1 ($6000) 2 ($8.000) 3($12.000) 4($15.000) por Semana  01/03/2025 al 31/08/2025  Ver Legales",
+      "legales": "REINTEGRO ... PAGANDO CON TARJETA PREPAGA VISA PERSONAL PAY O CON QR DE PERSONAL PAY..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/4aafdd83-2335-4d1a-b90c-f131a19bfc49___37426dcec39dbf5b840a60217f1ef738.webp",
+      "medio_pago": "Tarjeta de débito (Programa Beneficios ANSES)",
+      "descuento": "10% Dto",
+      "tope": "Tope : $1.000 por transacción",
+      "aplica_en": "tienda",
+      "detalles": "APLICA TIENDA  10% Dto  Tope : $1.000 por transacción  Del 01/02/2025 al 31/08/2025  Ver Legales",
+      "legales": "BENEFICIOS ANSES ... EL DESCUENTO ... SE REINTEGRARÁ EN LA TARJETA..."
+    },
+    {
+      "logo": "https://diaio.vtexassets.com/assets/vtex.file-manager-graphql/images/496978d7-e961-47e6-acae-e8fbc7cd9693___3a6c29dcdca72fdc5b2fec78235dcf15.png",
+      "medio_pago": "Tarjeta Sidecreer (2 o 3 cuotas sin interés)",
+      "descuento": "10% en 2 o 3 cuotas s/ interés",
+      "tope": "Tope : $2.000 por transacción",
+      "aplica_en": "tienda",
+      "detalles": "APLICA TIENDA  10% en 2 o 3 cuotas s/ interés  Tope : $2.000 por transacción  Del 01/07/2025 al 30/09/2025  Ver Legales",
+      "legales": "PROMOCIÓN DOMINGOS ... TIENDAS DIA ... PROVINCIA DE ENTRE RÍOS ... SI.DE.CRE.E.R. S.A."
+    }
+  ]
+}
